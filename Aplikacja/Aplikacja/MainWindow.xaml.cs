@@ -25,9 +25,18 @@ namespace Aplikacja
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("Zalogowano");
+            second sec = new second();
+            sec.ShowDialog();
+        }
 
+        private void Register_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Konto zostało utworzone");
+            Register reg = new Register();
+            reg.ShowDialog();
         }
     }
 }

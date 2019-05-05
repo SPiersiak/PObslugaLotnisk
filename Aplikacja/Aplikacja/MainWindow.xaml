@@ -18,8 +18,8 @@
             </StackPanel>
         </StackPanel>
         <TextBlock HorizontalAlignment="Left" Height="67" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" FontSize="20"><Run Text="Aplikacja obsługi lotniska, przewoźników i pasażerów."/><LineBreak/><Run Text="Zaloguj sie lub stwórz now konto."/></TextBlock>
-        <Button Content="Sign In:" HorizontalAlignment="Left" Height="46" Margin="525,322,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" FontSize="22"/>
-        <Button Content="Sign Up:" HorizontalAlignment="Left" Height="46" Margin="664,322,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" FontSize="22"/>
+        <Button x:Name="Login" Content="Sign In:" HorizontalAlignment="Left" Height="46" Margin="525,322,0,0" VerticalAlignment="Top" Width="100" Click="Login_Click" FontSize="22"/>
+        <Button x:Name="Register" Content="Sign Up:" HorizontalAlignment="Left" Height="46" Margin="664,322,0,0" VerticalAlignment="Top" Width="100" Click="Register_Click" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Height="69" Margin="223,23,0,0" TextWrapping="Wrap" Text="Nazwa Aplikacji" VerticalAlignment="Top" Width="365" FontSize="48"/>
 
     </Grid>
