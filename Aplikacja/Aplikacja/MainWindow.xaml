@@ -1,0 +1,26 @@
+﻿<Window x:Class="Aplikacja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacja"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="184" Margin="495,108,0,0" VerticalAlignment="Top" Width="269">
+            <StackPanel HorizontalAlignment="Left" Height="92" Width="269" RenderTransformOrigin="0.492,0.522">
+                <Label Content="Username:" HorizontalAlignment="Left" Height="28" Margin="27,0,0,0" Width="70"/>
+                <TextBox HorizontalAlignment="Left" Height="50" Margin="27,0,0,0" TextWrapping="Wrap" Width="232"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Height="92" Margin="1,0,0,0" Width="268">
+                <Label Content="Password:" HorizontalAlignment="Left" Height="28" Margin="27,0,0,0" Width="70"/>
+                <TextBox HorizontalAlignment="Left" Height="50" Margin="27,0,0,0" TextWrapping="Wrap" Width="232"/>
+            </StackPanel>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Height="67" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" FontSize="20"><Run Text="Aplikacja obsługi lotniska, przewoźników i pasażerów."/><LineBreak/><Run Text="Zaloguj sie lub stwórz now konto."/></TextBlock>
+        <Button Content="Sign In:" HorizontalAlignment="Left" Height="46" Margin="525,322,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" FontSize="22"/>
+        <Button Content="Sign Up:" HorizontalAlignment="Left" Height="46" Margin="664,322,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Height="69" Margin="223,23,0,0" TextWrapping="Wrap" Text="Nazwa Aplikacji" VerticalAlignment="Top" Width="365" FontSize="48"/>
+
+    </Grid>
+</Window>
