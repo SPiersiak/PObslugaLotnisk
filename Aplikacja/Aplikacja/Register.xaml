@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="Register" Height="450" Width="800">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="68" Margin="488,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="262"/>
+        <TextBlock HorizontalAlignment="Left" Height="31" Margin="205,37,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="196" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="34" Margin="205,128,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="163" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="203,219,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="36" Width="198" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Height="28" Margin="205,317,0,0" TextWrapping="Wrap" Text="Type of user:" VerticalAlignment="Top" Width="168" FontSize="20"/>
+        <ComboBox HorizontalAlignment="Left" Height="40" Margin="488,305,0,0" VerticalAlignment="Top" Width="261" SelectionChanged="ComboBox_SelectionChanged" TextOptions.TextFormattingMode="Display">
+            <ComboBoxItem Content="Lotnisko" HorizontalAlignment="Left" Width="259" Selected="ComboBoxItem_Selected"/>
+            <ComboBoxItem Content="Przewoźnik" HorizontalAlignment="Left" Width="259"/>
+            <ComboBoxItem Content="Pasażer" HorizontalAlignment="Left" Width="259" Selected="ComboBoxItem_Selected_1" Margin="-1,0,0,0"/>
+        </ComboBox>
+        <PasswordBox HorizontalAlignment="Left" Height="68" Margin="488,110,0,0" VerticalAlignment="Top" Width="261"/>
+        <PasswordBox HorizontalAlignment="Left" Height="68" Margin="488,199,0,0" VerticalAlignment="Top" Width="263"/>
+
     </Grid>
 </Window>

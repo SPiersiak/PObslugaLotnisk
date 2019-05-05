@@ -15,28 +15,13 @@ using System.Windows.Shapes;
 namespace Aplikacja
 {
     /// <summary>
-    /// Logika interakcji dla klasy Register.xaml
+    /// Logika interakcji dla klasy Pasazer.xaml
     /// </summary>
-    public partial class Register : Window
+    public partial class Pasazer : Window
     {
-        public Register()
+        public Pasazer()
         {
             InitializeComponent();
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
