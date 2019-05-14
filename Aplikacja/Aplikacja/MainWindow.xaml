@@ -5,22 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacja"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="184" Margin="495,108,0,0" VerticalAlignment="Top" Width="269">
-            <StackPanel HorizontalAlignment="Left" Height="92" Width="269" RenderTransformOrigin="0.492,0.522">
-                <Label Content="Username:" HorizontalAlignment="Left" Height="28" Margin="27,0,0,0" Width="70"/>
-                <TextBox HorizontalAlignment="Left" Height="50" Margin="27,0,0,0" TextWrapping="Wrap" Width="232"/>
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Left" Height="92" Margin="1,0,0,0" Width="268">
-                <Label Content="Password:" HorizontalAlignment="Left" Height="28" Margin="27,0,0,0" Width="70"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" Margin="0,2,0,0" VerticalAlignment="Top">
+            <TextBlock HorizontalAlignment="Center" Height="69" TextWrapping="Wrap" Text="Nazwa Aplikacji" VerticalAlignment="Top" Width="350" FontSize="48" Foreground="Gray" TextAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0" TextWrapping="Wrap" Width="647.338" FontSize="20" TextAlignment="Center" Foreground="Gray" Height="55" VerticalAlignment="Top"><Run Text="Aplikacja obsługi lotniska, przewoźników i pasażerów."/><LineBreak/><Run Text="Zaloguj sie lub stwórz now konto."/></TextBlock>
+            <Ellipse HorizontalAlignment="Center" Width="110.473" Height="109.473" Margin="0,10,0,0">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="icons8-airport-96.png"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Username:" Width="350" Height="27" FontFamily="Segoe UI Light" Padding="0,10,0,0"/>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Width="350" Background="#FFF1F1F1" VerticalContentAlignment="Stretch" Height="44" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Width="350" Height="27" FontFamily="Segoe UI Light" Padding="0,10,0,0"><Run Text="Password:"/></TextBlock>
+            <PasswordBox RenderTransformOrigin="0.5,0.5" ScrollViewer.HorizontalScrollBarVisibility="Hidden" HorizontalAlignment="Center" Width="350" Background="#FFF1F1F1" Height="44" FontSize="28"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="45" VerticalAlignment="Bottom" Width="350" Margin="0,25,0,0">
+                <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Height="45" VerticalAlignment="Bottom" Width="112" Click="Login_Click" FontSize="18" Background="#FF045FAA" Foreground="White"/>
+                <Button x:Name="Register" Content="Register" HorizontalAlignment="Right" Height="45" VerticalAlignment="Bottom" Width="112" Click="Register_Click" FontSize="18" Background="#FF045FAA" Foreground="White" Padding="1" Margin="125,0,0,0"/>
             </StackPanel>
         </StackPanel>
-        <TextBlock HorizontalAlignment="Left" Height="67" Margin="31,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="483" FontSize="20"><Run Text="Aplikacja obsługi lotniska, przewoźników i pasażerów."/><LineBreak/><Run Text="Zaloguj sie lub stwórz now konto."/></TextBlock>
-        <Button x:Name="Login" Content="Sign In:" HorizontalAlignment="Left" Height="46" Margin="525,322,0,0" VerticalAlignment="Top" Width="100" Click="Login_Click" FontSize="22"/>
-        <Button x:Name="Register" Content="Sign Up:" HorizontalAlignment="Left" Height="46" Margin="664,322,0,0" VerticalAlignment="Top" Width="100" Click="Register_Click" FontSize="22"/>
-        <TextBlock HorizontalAlignment="Left" Height="69" Margin="223,23,0,0" TextWrapping="Wrap" Text="Nazwa Aplikacji" VerticalAlignment="Top" Width="365" FontSize="48"/>
-        <PasswordBox HorizontalAlignment="Left" Height="49" Margin="525,229,0,0" VerticalAlignment="Top" Width="230"/>
 
     </Grid>
 </Window>

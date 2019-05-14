@@ -122,5 +122,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-airport-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-clouds-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-user-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-checked-96.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,20 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacja"
         mc:Ignorable="d"
-        Title="Register" Height="450" Width="800">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="68" Margin="488,20,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="262"/>
-        <TextBlock HorizontalAlignment="Left" Height="31" Margin="205,37,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="196" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Height="34" Margin="205,128,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="163" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Margin="203,219,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="36" Width="198" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Left" Height="28" Margin="205,317,0,0" TextWrapping="Wrap" Text="Type of user:" VerticalAlignment="Top" Width="168" FontSize="20"/>
-        <ComboBox HorizontalAlignment="Left" Height="40" Margin="488,305,0,0" VerticalAlignment="Top" Width="261" SelectionChanged="ComboBox_SelectionChanged" TextOptions.TextFormattingMode="Display">
-            <ComboBoxItem Content="Lotnisko" HorizontalAlignment="Left" Width="259" Selected="ComboBoxItem_Selected"/>
-            <ComboBoxItem Content="Przewoźnik" HorizontalAlignment="Left" Width="259"/>
-            <ComboBoxItem Content="Pasażer" HorizontalAlignment="Left" Width="259" Selected="ComboBoxItem_Selected_1" Margin="-1,0,0,0"/>
+        Title="Register" Height="564" Width="760">
+    <Grid >
+        <TextBlock HorizontalAlignment="Center" Margin="266.086,68.545,266.086,434.227" TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Foreground="Gray" Text="and fly wherever you want" FontFamily="Segoe UI Light"/>
+        <TextBlock HorizontalAlignment="Center" Height="53.545" Margin="205,15,205,0" TextWrapping="Wrap" Text="Register for free" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
+        <PasswordBox Height="45" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="196.986,356.048,203.764,0" HorizontalAlignment="Center" Width="351.25" Background="#FFF1F1F1"/>
+        <TextBox HorizontalAlignment="Center" Height="45" Margin="196.986,273.684,203.764,0" TextWrapping="Wrap" Width="351.25" VerticalAlignment="Top" Background="#FFF1F1F1"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="201,248.684,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="90.322"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="201,331.048,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="90.322"/>
+        <Ellipse HorizontalAlignment="Left" Height="62.5" Margin="199.863,102.773,0,0" VerticalAlignment="Top" Width="64.091" Fill="#FFF1F1F1"/>
+        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="342.817,102.773,345.092,367.727" Width="64.091" Fill="#FFF1F1F1"/>
+        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="486.908,102.773,201,367.727" Width="64.092" Fill="#FFF1F1F1"/>
+        <Ellipse HorizontalAlignment="Left" Height="62.5" Margin="199.863,102.773,0,0" VerticalAlignment="Top" Width="64.091">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="icons8-user-96.png">
+                    <ImageBrush.RelativeTransform>
+                        <TransformGroup>
+                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </ImageBrush.RelativeTransform>
+                </ImageBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="488.408,102.773,199.5,367.727" Width="64.092">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="icons8-airport-96.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="342.816,102.773,345.092,367.727" Width="64.092">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="icons8-checked-96.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Rectangle HorizontalAlignment="Left" Height="5" Margin="263.954,131.909,0,0" VerticalAlignment="Top" Width="81.5" Fill="#FFF1F1F1"/>
+        <Rectangle HorizontalAlignment="Left" Height="5" Margin="406.908,131.909,0,0" VerticalAlignment="Top" Width="81.5" Fill="#FFF1F1F1"/>
+        <ComboBox x:Name="usrtype" HorizontalAlignment="Left" Height="45" Margin="196.986,198.684,0,0" VerticalAlignment="Top" Width="166" Text="--Type of user--" AutomationProperties.HelpText="fgfgfg" FontSize="24">
+            <ComboBoxItem Content="Airport" HorizontalAlignment="Left" Width="164"/>
+            <ComboBoxItem Content="Airline" HorizontalAlignment="Left" Width="164" BorderBrush="{x:Null}" Background="White"/>
+            <ComboBoxItem Content="Passenger" HorizontalAlignment="Left" Width="164"/>
         </ComboBox>
-        <PasswordBox HorizontalAlignment="Left" Height="68" Margin="488,110,0,0" VerticalAlignment="Top" Width="261"/>
-        <PasswordBox HorizontalAlignment="Left" Height="68" Margin="488,199,0,0" VerticalAlignment="Top" Width="263"/>
-
     </Grid>
 </Window>

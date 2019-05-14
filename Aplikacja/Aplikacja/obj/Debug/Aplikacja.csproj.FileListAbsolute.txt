@@ -13,8 +13,6 @@ C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikac
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Aplikacja.csproj.CoreCompileInputs.cache
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Aplikacja.exe
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Aplikacja.pdb
-C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\second.g.cs
-C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\second.baml
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Register.g.cs
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Register.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\Aplikacja.exe.config
@@ -40,3 +38,9 @@ C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Lotnisko.g.cs
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Pasazer.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Przewoznik.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Lotnisko.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Pasazer.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Przewoznik.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Lotnisko.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Pasazer.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Przewoznik.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Lotnisko.baml

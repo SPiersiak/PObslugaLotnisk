@@ -27,6 +27,7 @@ namespace Aplikacja
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            this.Hide();
             MessageBox.Show("Zalogowano");
             second sec = new second();
             sec.ShowDialog();
@@ -34,9 +35,15 @@ namespace Aplikacja
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Konto zostało utworzone");
+
+            this.Hide();
             Register reg = new Register();
             reg.ShowDialog();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
