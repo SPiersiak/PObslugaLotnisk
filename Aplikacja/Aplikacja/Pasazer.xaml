@@ -4,9 +4,66 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacja"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Pasazer" Height="450" Width="800">
-    <Grid>
-        
+        Title="Menu" Height="600" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
+        Background="#FF410A66">
+    <Grid MouseDown="Grid_MouseDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="271*"/>
+            <ColumnDefinition Width="753*"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="White" Margin="15 30 30 30" CornerRadius="5" Height="Auto" Panel.ZIndex="8" Grid.Column="1">
+            <Grid>
+                <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2" Height="40">
+                    <Grid>
+                        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                            <TextBlock Text="Aplikacja" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="0 2"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0">
+                            <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Click="ButtonFechar_Click">
+                                <materialDesign:PackIcon Kind="Close" Width="30" Height="30"/>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+                <Grid x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+        <Border Width="225" HorizontalAlignment="Left" Margin="30,30,0,30" Background="#424242"  CornerRadius="5" Height="Auto" Panel.ZIndex="8">
+            <Grid>
+                <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.2}">
+                    <Grid x:Name="GridCursor" Margin="0 100 0 0" Background="#2196F3" Width="10" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top"/>
+                </materialDesign:TransitioningContent>
+                <ListView x:Name="ListViewMenu" Margin="0 100" Foreground="LightGray" FontSize="18" SelectionChanged="ListViewMenu_SelectionChanged" SelectedIndex="0">
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Home" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Menu główne" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="User" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Moje Dane" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="AeroplaneTakeoff" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Rezerwacje" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Add" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Zarezerwuj" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
+
+    

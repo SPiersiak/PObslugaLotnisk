@@ -4,48 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Aplikacja"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Register" Height="564" Width="760">
-    <Grid >
-        <TextBlock HorizontalAlignment="Center" Margin="266.086,68.545,266.086,434.227" TextWrapping="Wrap" FontSize="20" TextAlignment="Center" Foreground="Gray" Text="and fly wherever you want" FontFamily="Segoe UI Light"/>
-        <TextBlock HorizontalAlignment="Center" Height="53.545" Margin="205,15,205,0" TextWrapping="Wrap" Text="Register for free" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
-        <PasswordBox Height="45" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Margin="196.986,356.048,203.764,0" HorizontalAlignment="Center" Width="351.25" Background="#FFF1F1F1"/>
-        <TextBox HorizontalAlignment="Center" Height="45" Margin="196.986,273.684,203.764,0" TextWrapping="Wrap" Width="351.25" VerticalAlignment="Top" Background="#FFF1F1F1"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="201,248.684,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="90.322"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="201,331.048,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="90.322"/>
-        <Ellipse HorizontalAlignment="Left" Height="62.5" Margin="199.863,102.773,0,0" VerticalAlignment="Top" Width="64.091" Fill="#FFF1F1F1"/>
-        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="342.817,102.773,345.092,367.727" Width="64.091" Fill="#FFF1F1F1"/>
-        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="486.908,102.773,201,367.727" Width="64.092" Fill="#FFF1F1F1"/>
-        <Ellipse HorizontalAlignment="Left" Height="62.5" Margin="199.863,102.773,0,0" VerticalAlignment="Top" Width="64.091">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="icons8-user-96.png">
-                    <ImageBrush.RelativeTransform>
-                        <TransformGroup>
-                            <ScaleTransform CenterY="0.5" CenterX="0.5"/>
-                            <SkewTransform CenterY="0.5" CenterX="0.5"/>
-                            <RotateTransform CenterY="0.5" CenterX="0.5"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </ImageBrush.RelativeTransform>
-                </ImageBrush>
-            </Ellipse.Fill>
-        </Ellipse>
-        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="488.408,102.773,199.5,367.727" Width="64.092">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="icons8-airport-96.png"/>
-            </Ellipse.Fill>
-        </Ellipse>
-        <Ellipse HorizontalAlignment="Center" Height="62.5" Margin="342.816,102.773,345.092,367.727" Width="64.092">
-            <Ellipse.Fill>
-                <ImageBrush ImageSource="icons8-checked-96.png"/>
-            </Ellipse.Fill>
-        </Ellipse>
-        <Rectangle HorizontalAlignment="Left" Height="5" Margin="263.954,131.909,0,0" VerticalAlignment="Top" Width="81.5" Fill="#FFF1F1F1"/>
-        <Rectangle HorizontalAlignment="Left" Height="5" Margin="406.908,131.909,0,0" VerticalAlignment="Top" Width="81.5" Fill="#FFF1F1F1"/>
-        <ComboBox x:Name="usrtype" HorizontalAlignment="Left" Height="45" Margin="196.986,198.684,0,0" VerticalAlignment="Top" Width="166" Text="--Type of user--" AutomationProperties.HelpText="fgfgfg" FontSize="24">
-            <ComboBoxItem Content="Airport" HorizontalAlignment="Left" Width="164"/>
-            <ComboBoxItem Content="Airline" HorizontalAlignment="Left" Width="164" BorderBrush="{x:Null}" Background="White"/>
-            <ComboBoxItem Content="Passenger" HorizontalAlignment="Left" Width="164"/>
-        </ComboBox>
+        Title="Register" Height="564" Width="500" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Background="#FF410A66">
+    <Grid>
+        <StackPanel Margin="50,33,50,50" Grid.Row="1">
+            <Border Background="White" Margin="10 20" CornerRadius="5" Height="Auto" Panel.ZIndex="8">
+                <StackPanel Margin="25">
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Register for free" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" FontSize="20" TextAlignment="Center" Foreground="Gray" Text="and fly wherever you want" FontFamily="Segoe UI Light"/>
+                    <ComboBox x:Name="usrtype" Height="45" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Account type" SelectionChanged="Usrtype_SelectionChanged">
+                        <ComboBoxItem Content="Passenger" HorizontalAlignment="Left" />
+                        <ComboBoxItem Content="Airline" HorizontalAlignment="Left" />
+                        <ComboBoxItem Content="Airport" HorizontalAlignment="Left" />
+                    </ComboBox>
+                    <TextBox x:Name="LoginBox" Text="{Binding Login}" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Login"/>
+                    <PasswordBox x:Name="Password" Margin="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"  materialDesign:HintAssist.Hint="Password" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                        <Button x:Name="Register1" Content="Register" Padding="35 0 35 0" Click="Register_Click"  Margin="15 05" FontSize="16"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
     </Grid>
 </Window>

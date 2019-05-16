@@ -27,6 +27,9 @@ namespace Aplikacja
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            string Login = Login1.Text;
+            string Passw = Password.Password;
+
             this.Hide();
             MessageBox.Show("Zalogowano");
             second sec = new second();
@@ -41,7 +44,9 @@ namespace Aplikacja
             reg.ShowDialog();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+      
+
+        private void Login1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

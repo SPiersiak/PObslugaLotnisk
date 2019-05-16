@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Aplikacja.Rezerwacje_"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Aplikacja"
+             mc:Ignorable="d"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="450" Width="650">
+    <Grid  Height="450" Width="650">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="450" Width="650">
+                <StackPanel>
+                    <TextBlock Text="Rezerwacje" Foreground="Black" FontSize="25"/>
+                    <StackPanel Margin="10">
+                        <TextBlock Name="name" Text="Imię" FontSize="35" Margin="0,5,0,-1"/>
+                        <TextBlock Name="sname" Text="Nazwisko" FontSize="35"/>
+                        <TextBlock Text="Moje rezerwacje:" FontSize="25" FontFamily="Champagne &amp; Limousines" Margin="5,15,5,5"/>
+                        <Border Background="White" CornerRadius="5" Panel.ZIndex="8" Width="Auto">
+                            <DataGrid x:Name="Rezerwacje" Margin="2">
+                                <!-- Nagłówki tekstowe kolumn-->
+                                <DataGrid.Columns>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Lotnisko Startowe" Binding="{Binding LotStart}"/>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Lotnisko Docelowe" Binding="{Binding LotDoc}"/>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Data Lotu" Binding="{Binding DataLot}"/>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Linie Lotnicze" Binding="{Binding LinLot}"/>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Numer Miejsca" Binding="{Binding NumMiej}"/>
+                                </DataGrid.Columns>
+                            </DataGrid>        
+                        </Border>
+                    </StackPanel>
+                    <Label FontFamily="Champagne &amp; Limousines" Content="Udanej Podróży" FontSize="18" Margin="25"/>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</UserControl>
+

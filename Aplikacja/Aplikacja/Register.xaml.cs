@@ -22,21 +22,32 @@ namespace Aplikacja
         public Register()
         {
             InitializeComponent();
-        }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+            
 
         }
 
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+
+
+
+        private void Register_Click(object sender, RoutedEventArgs e)
         {
+            string login = LoginBox.Text;
+            string passw = Password.Password;
+            int type = usrtype.SelectedIndex;
+            LoginBox.Text = type.ToString();
+
+            this.Hide();
+            MessageBox.Show("Zarejestrowano");
+            Pasazer pas = new Pasazer();
+            pas.ShowDialog();
+
+
 
         }
 
-        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        private void Usrtype_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
     }
 }

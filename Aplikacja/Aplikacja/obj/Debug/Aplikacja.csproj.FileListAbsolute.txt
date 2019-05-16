@@ -39,10 +39,8 @@ C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Pasazer.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Przewoznik.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Lotnisko.baml
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Pasazer.g.cs
-C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Przewoznik.g.cs
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Lotnisko.g.cs
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Pasazer.baml
-C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Przewoznik.baml
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Lotnisko.baml
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\EntityFramework.dll
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\EntityFramework.SqlServer.dll
@@ -54,3 +52,15 @@ C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikac
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\System.Data.SQLite.xml
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Aplikacja.csproj.CopyComplete
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Aplikacja_Content.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\FluentWPF.dll
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\MaterialDesignColors.dll
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\App.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\bin\Debug\MaterialDesignColors.pdb
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\MainMenu.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\MainMenu.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Rezerwacje_.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Rezerwacje_.baml
