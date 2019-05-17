@@ -10,7 +10,7 @@
         <StackPanel HorizontalAlignment="Left" Height="184" Margin="495,108,0,0" VerticalAlignment="Top" Width="269">
             <StackPanel HorizontalAlignment="Left" Height="92" Width="269" RenderTransformOrigin="0.492,0.522">
                 <Label Content="Username:" HorizontalAlignment="Left" Height="28" Margin="27,0,0,0" Width="70"/>
-                <TextBox HorizontalAlignment="Left" Height="50" Margin="27,0,0,0" TextWrapping="Wrap" Width="232"/>
+                <TextBox HorizontalAlignment="Left" Name="UN" Height="50" Margin="27,0,0,0" TextWrapping="Wrap" Width="232" TextChanged="TextBox_TextChanged"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left" Height="92" Margin="1,0,0,0" Width="268">
                 <Label Content="Password:" HorizontalAlignment="Left" Height="28" Margin="27,0,0,0" Width="70"/>
@@ -20,7 +20,22 @@
         <Button x:Name="Login" Content="Sign In:" HorizontalAlignment="Left" Height="46" Margin="525,322,0,0" VerticalAlignment="Top" Width="100" Click="Login_Click" FontSize="22"/>
         <Button x:Name="Register" Content="Sign Up:" HorizontalAlignment="Left" Height="46" Margin="664,322,0,0" VerticalAlignment="Top" Width="100" Click="Register_Click" FontSize="22"/>
         <TextBlock HorizontalAlignment="Left" Height="69" Margin="223,23,0,0" TextWrapping="Wrap" Text="Nazwa Aplikacji" VerticalAlignment="Top" Width="365" FontSize="48"/>
-        <PasswordBox HorizontalAlignment="Left" Height="49" Margin="525,229,0,0" VerticalAlignment="Top" Width="230"/>
+        <PasswordBox HorizontalAlignment="Left" Name="PW" Height="49" Margin="525,229,0,0" VerticalAlignment="Top" Width="230"/>
+        <ListView HorizontalAlignment="Left" Name="Wyswietl" Height="90" Margin="31,278,0,0" VerticalAlignment="Top" Width="376" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120">
+            <ComboBox Width="120"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Name="SP" Margin="426,283,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Lotnisko" TabIndex="1" HorizontalAlignment="Left" Width="118" Selected="ComboBoxItem_Selected"/>
+            <ComboBoxItem Content="Przewoźnik" TabIndex="2" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Urzytkownik" TabIndex="3" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
 
     </Grid>
 </Window>

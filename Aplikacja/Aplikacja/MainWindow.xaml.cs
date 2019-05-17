@@ -24,12 +24,25 @@ namespace Aplikacja
         {
             InitializeComponent();
         }
-
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Zalogowano");
             second sec = new second();
             sec.ShowDialog();
+            List<string> groceryList = new List<string>();
+            using (var db = new LogDbEntities())
+            {
+                groceryList = (from g in db.LogRegs select g.username).ToList();
+                db.Dispose();
+                
+            }
+
+            foreach(string str in groceryList)
+            {
+                MainWindow cos = new MainWindow();
+                //ListView.Items.Add(str);
+                Wyswietl.Items.Add(str);
+            }
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)
@@ -37,6 +50,35 @@ namespace Aplikacja
             MessageBox.Show("Konto zostało utworzone");
             Register reg = new Register();
             reg.ShowDialog();
+            using (var db = new LogDbEntities())
+            {
+                int g = SP.SelectedIndex;
+                LogReg newItem = new LogReg
+                {
+                    Id = db.LogRegs.Count() + 1,
+                    username = UN.Text,
+                    password = PW.Password,
+                    specification = g,
+                };
+                db.LogRegs.Add(newItem);
+                db.SaveChanges();
+                db.Dispose();
+            }
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

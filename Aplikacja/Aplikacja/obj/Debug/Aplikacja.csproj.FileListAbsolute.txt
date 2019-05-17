@@ -40,3 +40,14 @@ C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Lotnisko.g.cs
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Pasazer.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Przewoznik.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Lotnisko.baml
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\EntityFramework.dll
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\System.Data.SQLite.dll
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\EntityFramework.xml
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\System.Data.SQLite.xml
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Aplikacja.csproj.CopyComplete
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Aplikacja_Content.g.cs
