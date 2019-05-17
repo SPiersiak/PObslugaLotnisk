@@ -31,7 +31,7 @@ namespace Aplikacja
             string Passw = Password.Password;
 
             this.Hide();
-            MessageBox.Show("Zalogowano");
+            //MessageBox.Show("Zalogowano");
             second sec = new second();
             sec.ShowDialog();
         }

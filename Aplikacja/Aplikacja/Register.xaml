@@ -14,9 +14,9 @@
                     <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Register for free" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
                     <TextBlock HorizontalAlignment="Center" FontSize="20" TextAlignment="Center" Foreground="Gray" Text="and fly wherever you want" FontFamily="Segoe UI Light"/>
                     <ComboBox x:Name="usrtype" Height="45" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Account type" SelectionChanged="Usrtype_SelectionChanged">
-                        <ComboBoxItem Content="Passenger" HorizontalAlignment="Left" />
-                        <ComboBoxItem Content="Airline" HorizontalAlignment="Left" />
-                        <ComboBoxItem Content="Airport" HorizontalAlignment="Left" />
+                        <ComboBoxItem TabIndex="3" Content="Passenger" HorizontalAlignment="Left" />
+                        <ComboBoxItem TabIndex="2" Content="Airline" HorizontalAlignment="Left" />
+                        <ComboBoxItem TabIndex="1" Content="Airport" HorizontalAlignment="Left" />
                     </ComboBox>
                     <TextBox x:Name="LoginBox" Text="{Binding Login}" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Login"/>
                     <PasswordBox x:Name="Password" Margin="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"  materialDesign:HintAssist.Hint="Password" />
