@@ -31,12 +31,22 @@ namespace Aplikacja
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            string login = LoginBox.Text;
-            string passw = Password.Password;
-            int type = usrtype.SelectedIndex;
-            LoginBox.Text = type.ToString();
+            using (var db = new LogRegEntities())
+            {
+                int g = usrtype.SelectedIndex;
+                LogReg newItem = new LogReg
+                {
+                    Id = db.LogRegs.Count() + 1,
+                    username = LoginBox.Text,
+                    password = Password.Password,
+                    specification = g,
+                };
+                db.LogRegs.Add(newItem);
+                db.SaveChanges();
+                db.Dispose();
+            }
 
-            this.Hide();
+                this.Hide();
             MessageBox.Show("Zarejestrowano");
             Pasazer pas = new Pasazer();
             pas.ShowDialog();

@@ -15,8 +15,9 @@
                 </Ellipse.Fill>
             </Ellipse>
             <Border Background="White" Margin="10 20" CornerRadius="5" Height="245" Panel.ZIndex="8">
+                
                 <StackPanel Margin="25">
-
+                    
                     <TextBox x:Name="Login1" Text="{Binding Login}" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Login"/>
                     <PasswordBox x:Name="Password" Margin="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"  materialDesign:HintAssist.Hint="Password" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
@@ -26,5 +27,12 @@
                 </StackPanel>
             </Border>
         </StackPanel>
+        <ListView Name="cos" HorizontalAlignment="Left" Height="100" Margin="156,471,0,0" VerticalAlignment="Top" Width="100">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

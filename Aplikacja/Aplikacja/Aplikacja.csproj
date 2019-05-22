@@ -84,11 +84,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Ile_pas.cs">
+      <DependentUpon>LogRegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogReg.cs">
+      <DependentUpon>LogRegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogRegModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogRegModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogRegModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogRegModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LogRegModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogRegModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="lotnisko.cs">
+      <DependentUpon>LogRegModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pasazer.xaml.cs">
       <DependentUpon>Pasazer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="przewoznik.cs">
+      <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
@@ -98,6 +125,9 @@
     </Compile>
     <Compile Include="Rezerwacje_.xaml.cs">
       <DependentUpon>Rezerwacje_.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="zar_uzyt.cs">
+      <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
@@ -150,6 +180,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="LogRegModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LogRegModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LogRegModel.edmx.diagram">
+      <DependentUpon>LogRegModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -175,6 +212,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogRegModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LogRegModel.edmx</DependentUpon>
+      <LastGenOutput>LogRegModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LogRegModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LogRegModel.edmx</DependentUpon>
+      <LastGenOutput>LogRegModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" />

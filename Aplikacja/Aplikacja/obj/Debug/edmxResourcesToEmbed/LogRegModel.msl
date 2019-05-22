@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LogRegModelStoreContainer" CdmEntityContainer="LogRegEntities">
+    <EntitySetMapping Name="Ile_pas">
+      <EntityTypeMapping TypeName="LogRegModel.Ile_pas">
+        <MappingFragment StoreEntitySet="Ile_pas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_lot" ColumnName="Id_lot" />
+          <ScalarProperty Name="Ile_pas1" ColumnName="Ile_pas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogRegs">
+      <EntityTypeMapping TypeName="LogRegModel.LogReg">
+        <MappingFragment StoreEntitySet="LogReg">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="specification" ColumnName="specification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lotniskoes">
+      <EntityTypeMapping TypeName="LogRegModel.lotnisko">
+        <MappingFragment StoreEntitySet="lotnisko">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nazwa_Lot" ColumnName="Nazwa_Lot" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Dzien" ColumnName="Dzien" />
+          <ScalarProperty Name="Godzina" ColumnName="Godzina" />
+          <ScalarProperty Name="Nr_pas" ColumnName="Nr_pas" />
+          <ScalarProperty Name="Typ_sam" ColumnName="Typ_sam" />
+          <ScalarProperty Name="Koszt" ColumnName="Koszt" />
+          <ScalarProperty Name="Zarezerwowane" ColumnName="Zarezerwowane" />
+          <ScalarProperty Name="Id_lot" ColumnName="Id_lot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="przewozniks">
+      <EntityTypeMapping TypeName="LogRegModel.przewoznik">
+        <MappingFragment StoreEntitySet="przewoznik">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AddLot" ColumnName="AddLot" />
+          <ScalarProperty Name="K_kl_pierwszej" ColumnName="K_kl_pierwszej" />
+          <ScalarProperty Name="K_kl_biznesowej" ColumnName="K_kl_biznesowej" />
+          <ScalarProperty Name="K_kl_ekonomicznej" ColumnName="K_kl_ekonomicznej" />
+          <ScalarProperty Name="K_bag_do25" ColumnName="K_bag_do25" />
+          <ScalarProperty Name="K_bag_pow25" ColumnName="K-bag_pow25" />
+          <ScalarProperty Name="I_miejsc" ColumnName="I_miejsc" />
+          <ScalarProperty Name="Cz_trwania" ColumnName="Cz_trwania" />
+          <ScalarProperty Name="Przesiadki" ColumnName="Przesiadki" />
+          <ScalarProperty Name="Id_prze" ColumnName="Id_prze" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zar_uzyt">
+      <EntityTypeMapping TypeName="LogRegModel.zar_uzyt">
+        <MappingFragment StoreEntitySet="zar_uzyt">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_lot" ColumnName="Id_lot" />
+          <ScalarProperty Name="Id_user" ColumnName="Id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

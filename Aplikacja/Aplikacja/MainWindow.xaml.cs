@@ -26,14 +26,31 @@ namespace Aplikacja
         }
 
         private void Login_Click(object sender, RoutedEventArgs e)
-        {
-            string Login = Login1.Text;
-            string Passw = Password.Password;
+        { 
 
-            this.Hide();
+            string log;
+            string pas;
+            
+            List<string> loginList = new List<string>();
+            using (var db = new LogRegEntities())
+            {
+                loginList = (from g in db.LogRegs select g.Id + g.username + g.password + g.specification).ToList();
+                db.Dispose();
+            }
+           /* if (Equals(log, Login1.Text) && Equals(pas, Password.Password))
+            {
+                MessageBox.Show(log);
+            }
+            else MessageBox.Show(log+pas);*/
+            foreach(string str in loginList)
+            {
+                cos.Items.Add(str);
+            }
+
+            //    this.Hide();
             //MessageBox.Show("Zalogowano");
-            second sec = new second();
-            sec.ShowDialog();
+            //second sec = new second();
+            //sec.ShowDialog();
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)
@@ -50,5 +67,7 @@ namespace Aplikacja
         {
 
         }
+
+        
     }
 }

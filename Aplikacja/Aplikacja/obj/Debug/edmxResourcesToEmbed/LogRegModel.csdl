@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LogRegModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ile_pas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Id_lot" Type="Int64" Nullable="false" />
+    <Property Name="Ile_pas1" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LogReg">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="specification" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lotnisko">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Nazwa_Lot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Adres" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Dzien" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Godzina" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Nr_pas" Type="Int64" Nullable="false" />
+    <Property Name="Typ_sam" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Koszt" Type="Int64" Nullable="false" />
+    <Property Name="Zarezerwowane" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id_lot" Type="Int64" />
+  </EntityType>
+  <EntityType Name="przewoznik">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="AddLot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="K_kl_pierwszej" Type="Int64" Nullable="false" />
+    <Property Name="K_kl_biznesowej" Type="Int64" Nullable="false" />
+    <Property Name="K_kl_ekonomicznej" Type="Int64" Nullable="false" />
+    <Property Name="K_bag_do25" Type="Int64" Nullable="false" />
+    <Property Name="K_bag_pow25" Type="Int64" Nullable="false" />
+    <Property Name="I_miejsc" Type="Int64" Nullable="false" />
+    <Property Name="Cz_trwania" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Przesiadki" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Id_prze" Type="Int64" />
+  </EntityType>
+  <EntityType Name="zar_uzyt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="Id_lot" Type="Int64" Nullable="false" />
+    <Property Name="Id_user" Type="Int64" />
+  </EntityType>
+  <EntityContainer Name="LogRegEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ile_pas" EntityType="Self.Ile_pas" />
+    <EntitySet Name="LogRegs" EntityType="Self.LogReg" />
+    <EntitySet Name="lotniskoes" EntityType="Self.lotnisko" />
+    <EntitySet Name="przewozniks" EntityType="Self.przewoznik" />
+    <EntitySet Name="zar_uzyt" EntityType="Self.zar_uzyt" />
+  </EntityContainer>
+</Schema>
