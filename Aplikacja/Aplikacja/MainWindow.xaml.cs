@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
+
+
 
 namespace Aplikacja
 {
@@ -28,24 +31,30 @@ namespace Aplikacja
         private void Login_Click(object sender, RoutedEventArgs e)
         { 
 
-            string log;
-            string pas;
             
             List<string> loginList = new List<string>();
             using (var db = new LogRegEntities())
             {
-                loginList = (from g in db.LogRegs select g.Id + g.username + g.password + g.specification).ToList();
+                var query = @"SELECT * from LogReg WHERE username='" + this.Login1.Text + "' and password='" + this.Password.Password + "' ";
+                string[] result = db.Database.ExecuteSqlCommand(query);
+                //loginList = (from g in db.LogRegs select g.Id + g.username + g.password + g.specification).ToList();
                 db.Dispose();
+                
             }
+            using (var db1 = new DateContext())
+            {
+                using (var command = db1.Database.GetDbConnection().CreateCommand())
+                {
+
+                }
+            }
+            
+
            /* if (Equals(log, Login1.Text) && Equals(pas, Password.Password))
             {
                 MessageBox.Show(log);
             }
             else MessageBox.Show(log+pas);*/
-            foreach(string str in loginList)
-            {
-                cos.Items.Add(str);
-            }
 
             //    this.Hide();
             //MessageBox.Show("Zalogowano");
