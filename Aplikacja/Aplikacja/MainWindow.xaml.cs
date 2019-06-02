@@ -56,10 +56,10 @@ namespace Aplikacja
             }
             else MessageBox.Show(log+pas);*/
 
-            //    this.Hide();
-            //MessageBox.Show("Zalogowano");
-            //second sec = new second();
-            //sec.ShowDialog();
+            this.Hide();
+            MessageBox.Show("Zalogowano");
+            Lotnisko sec = new Lotnisko();
+            sec.ShowDialog();
         }
 
         private void Register_Click(object sender, RoutedEventArgs e)

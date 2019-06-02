@@ -108,20 +108,24 @@
     <Compile Include="lotnisko.cs">
       <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Lotnisko.xaml.cs">
+      <DependentUpon>Lotnisko.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainWindowDataModel.cs" />
     <Compile Include="Pasazer.xaml.cs">
       <DependentUpon>Pasazer.xaml</DependentUpon>
     </Compile>
     <Compile Include="przewoznik.cs">
       <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Przewoznik.xaml.cs">
+      <DependentUpon>Przewoznik.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Lotnisko.xaml.cs">
-      <DependentUpon>Lotnisko.xaml</DependentUpon>
     </Compile>
     <Compile Include="Rezerwacje_.xaml.cs">
       <DependentUpon>Rezerwacje_.xaml</DependentUpon>
@@ -129,6 +133,10 @@
     <Compile Include="zar_uzyt.cs">
       <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
+    <Page Include="Lotnisko.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,11 +157,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Register.xaml">
+    <Page Include="Przewoznik.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Lotnisko.xaml">
+    <Page Include="Register.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

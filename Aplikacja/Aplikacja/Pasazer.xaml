@@ -18,7 +18,7 @@
                 <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2" Height="40">
                     <Grid>
                         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                            <TextBlock Text="Aplikacja" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="0 2"/>
+                            <TextBlock Text="Panel Pasażera" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="0 2"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0">
                             <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Click="ButtonFechar_Click">
