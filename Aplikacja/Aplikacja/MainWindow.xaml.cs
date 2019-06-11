@@ -107,10 +107,17 @@ namespace Aplikacja
             }
             else MessageBox.Show(log+pas);*/
 
+<<<<<<< HEAD
             //    this.Hide();
             //MessageBox.Show("Zalogowano");
             //second sec = new second();
             //sec.ShowDialog();*/
+=======
+            this.Hide();
+            MessageBox.Show("Zalogowano");
+            Lotnisko sec = new Lotnisko();
+            sec.ShowDialog();
+>>>>>>> 236533464e37351dfc47e8800014a42854ca17f7
         }
 
 

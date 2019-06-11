@@ -4,17 +4,23 @@
 winexe
 C#
 .cs
-C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\
 Aplikacja
 none
 false
 DEBUG;TRACE
-C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\App.xaml
-6-1648936811
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\App.xaml
+7-2091157497
 2193819785
+<<<<<<< HEAD
 23782206857
 24-1012349367
 MainMenu.xaml;MainWindow.xaml;Pasazer.xaml;Register.xaml;Lotnisko.xaml;Rezerwacje_.xaml;
+=======
+24-1589579853
+24-1346590824
+Lotnisko.xaml;MainMenu.xaml;MainWindow.xaml;Pasazer.xaml;Przewoznik.xaml;Register.xaml;Rezerwacje_.xaml;
+>>>>>>> 236533464e37351dfc47e8800014a42854ca17f7
 
 False
 
