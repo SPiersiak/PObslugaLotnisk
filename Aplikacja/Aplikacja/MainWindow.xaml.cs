@@ -13,8 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.Entity;
-
-
+using System.Data.SQLite;
 
 namespace Aplikacja
 {
@@ -26,17 +25,69 @@ namespace Aplikacja
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void Login_Click(object sender, RoutedEventArgs e)
-        { 
+        }
+        
+        string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
+
+
+        public void Login_Click1(object sender, RoutedEventArgs e)
+        {
+            SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
+            if (((Login1.Text == "") && (Password.Password == "")) || (Login1.Text == "") || (Password.Password == ""))
+            {
+                MessageBox.Show("Empty login or password");
+            }
+            else
+            {
+                try
+                {
+                    sqlcon.Open();
+                    string query = "SELECT * FROM Log WHERE username = '" + Login1.Text + "'AND password= '" + Password.Password + "' ";
+                    SQLiteCommand com = new SQLiteCommand(query, sqlcon);
+                    com.ExecuteNonQuery();
+                    SQLiteDataReader dr = com.ExecuteReader();
+                    int count = 0;
+                    string id = "";
+                    string typ = "";
+                    while (dr.Read())
+                    {
+                        count++;
+                        id = dr["Id"].ToString();
+                        typ = dr["specification"].ToString();
+                    }
+                    
+                    if(count == 1)
+                    {
+                        BazaClass cos = new BazaClass();
+                        cos.Id = Convert.ToInt32(id);
+                        cos.Typ = Convert.ToInt32(typ);
+                        Register reg = new Register(id, typ);
+                        reg.ShowDialog();
+                        this.Hide();
+                    }
+
+                    if(count < 1)
+                    {
+                       
+                        MessageBox.Show("Wrong login or pasword");
+                        Login1.Clear();
+                        Password.Clear();
+                    }
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Error");
+                }
+                
+            }
 
             
-            List<string> loginList = new List<string>();
+            /*List<string> loginList = new List<string>();
             using (var db = new LogRegEntities())
             {
-                var query = @"SELECT * from LogReg WHERE username='" + this.Login1.Text + "' and password='" + this.Password.Password + "' ";
-                string[] result = db.Database.ExecuteSqlCommand(query);
+                var query = @"SELECT Id from LogReg WHERE username='" + this.Login1.Text + "' and password='" + this.Password.Password + "' ";
+                int[] result = db.Database.ExecuteSqlCommand(query);
                 //loginList = (from g in db.LogRegs select g.Id + g.username + g.password + g.specification).ToList();
                 db.Dispose();
                 
@@ -59,8 +110,9 @@ namespace Aplikacja
             //    this.Hide();
             //MessageBox.Show("Zalogowano");
             //second sec = new second();
-            //sec.ShowDialog();
+            //sec.ShowDialog();*/
         }
+
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {

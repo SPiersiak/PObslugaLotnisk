@@ -19,19 +19,24 @@ namespace Aplikacja
     /// </summary>
     public partial class Register : Window
     {
+        string x;
+        string y;
         public Register()
         {
             InitializeComponent();
-            
-
+        }
+        public Register(string id, string typ):this()
+        {
+            x = id;
+            y = typ;
         }
 
 
 
 
         private void Register_Click(object sender, RoutedEventArgs e)
-        {
-            using (var db = new LogRegEntities())
+        {   
+           using (var db = new LogRegEntities())
             {
                 int g = usrtype.SelectedIndex;
                 LogReg newItem = new LogReg
@@ -44,6 +49,7 @@ namespace Aplikacja
                 db.LogRegs.Add(newItem);
                 db.SaveChanges();
                 db.Dispose();
+
             }
 
                 this.Hide();
