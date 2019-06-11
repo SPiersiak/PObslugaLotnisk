@@ -1,9 +1,10 @@
-﻿<Window x:Class="Aplikacja.Lotnisko"
+﻿<Window x:Class="Aplikacja.Przewoznik"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Aplikacja"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="Menu" Height="600" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" 
         Background="#FF410A66">
@@ -17,7 +18,7 @@ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                 <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2" Height="40">
                     <Grid>
                         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                            <TextBlock Text="Panel zarządzania lotniskiem" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="0 2"/>
+                            <TextBlock Text="Panel Przewoźnika" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="0 2"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0">
                             <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Click="ButtonFechar_Click">
@@ -44,19 +45,19 @@ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="User" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Dane Lotniska" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                            <TextBlock Text="Moje Dane" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AeroplaneTakeoff" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Rezerwacje Pasów" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                            <TextBlock Text="Rezerwuj Pas" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Add" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Dodaj Pas" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                            <TextBlock Text="Dodaj Lot" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

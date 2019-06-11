@@ -83,3 +83,4 @@ C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\App.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\MainMenu.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Rezerwacje_.baml
 C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Aplikacja.csproj.CopyComplete
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Aplikacja_Content.g.cs

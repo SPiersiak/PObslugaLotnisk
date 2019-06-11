@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Aplikacja
 {
     /// <summary>
-    /// Logika interakcji dla klasy Lotnisko.xaml
+    /// Logika interakcji dla klasy Przewoznik.xaml
     /// </summary>
-    public partial class Lotnisko : Window
+    public partial class Przewoznik : Window
     {
-        public Lotnisko()
+        public Przewoznik()
         {
             InitializeComponent();
         }
