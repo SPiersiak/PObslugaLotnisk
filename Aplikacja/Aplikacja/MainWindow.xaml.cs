@@ -59,12 +59,36 @@ namespace Aplikacja
                     
                     if(count == 1)
                     {
-                        BazaClass cos = new BazaClass();
+                     
+                        switch (Convert.ToInt32(typ))
+                        {
+                            case 0:
+                                this.Hide();
+                                MessageBox.Show("Zalogowano");
+                                Pasazer pas = new Pasazer(id,typ);
+                                pas.ShowDialog();
+                                break;
+                            case 1:
+                                this.Hide();
+                                MessageBox.Show("Zalogowano");
+                                Lotnisko lot = new Lotnisko(id,typ);
+                                lot.ShowDialog();
+                                break;
+                            case 2:
+                                this.Hide();
+                                MessageBox.Show("Zalogowano");
+                                Przewoznik prz = new Przewoznik(id,typ);
+                                prz.ShowDialog();
+                                break;
+                        }
+
+
+                       /* BazaClass cos = new BazaClass();
                         cos.Id = Convert.ToInt32(id);
                         cos.Typ = Convert.ToInt32(typ);
                         Register reg = new Register(id, typ);
                         reg.ShowDialog();
-                        this.Hide();
+                        this.Hide(); */
                     }
 
                     if(count < 1)
@@ -107,17 +131,16 @@ namespace Aplikacja
             }
             else MessageBox.Show(log+pas);*/
 
-<<<<<<< HEAD
+
             //    this.Hide();
             //MessageBox.Show("Zalogowano");
             //second sec = new second();
             //sec.ShowDialog();*/
-=======
-            this.Hide();
-            MessageBox.Show("Zalogowano");
+
+            /*this.Hide();
+            
             Lotnisko sec = new Lotnisko();
-            sec.ShowDialog();
->>>>>>> 236533464e37351dfc47e8800014a42854ca17f7
+            sec.ShowDialog();*/
         }
 
 

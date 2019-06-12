@@ -10,16 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\App.xaml
-6-1648936811
+7-2091157497
 2193819785
-<<<<<<< HEAD
-23782206857
-24-1012349367
-=======
-18-1922347600
+21-267569627
 24-1346590824
->>>>>>> 236533464e37351dfc47e8800014a42854ca17f7
-MainMenu.xaml;MainWindow.xaml;Pasazer.xaml;Register.xaml;Lotnisko.xaml;Rezerwacje_.xaml;
+Lotnisko.xaml;MainMenu.xaml;MainWindow.xaml;Pasazer.xaml;Przewoznik.xaml;Register.xaml;Rezerwacje_.xaml;
 
-True
+False
 

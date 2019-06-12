@@ -19,12 +19,19 @@ namespace Aplikacja
     /// </summary>
     public partial class Pasazer : Window
     {
+        string x;
+        string y;
         public Pasazer()
         {
             InitializeComponent();
         }
+        public Pasazer(string id, string typ) : this()
+        {
+            x = id;
+            y = typ;
+        }
 
-        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+    private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
