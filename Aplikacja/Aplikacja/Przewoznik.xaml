@@ -18,7 +18,7 @@
                 <StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2" Height="40">
                     <Grid>
                         <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                            <TextBlock Text="Panel Przewoźnika" VerticalAlignment="Center" FontSize="20" FontFamily="Champagne &amp; Limousines" Margin="0 2"/>
+                            <TextBlock Text="Panel Przewoźnika" VerticalAlignment="Center" Foreground="Gray" FontSize="25" FontFamily="Champagne &amp; Limousines" Margin="0 2"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0">
                             <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Click="ButtonFechar_Click">
@@ -50,14 +50,14 @@
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="AeroplaneTakeoff" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Rezerwuj Pas" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                            <materialDesign:PackIcon Kind="ShareVariant" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Moje Połączenia" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Add" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Dodaj Lot" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
+                            <TextBlock Text="Dodaj Połączenie" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>

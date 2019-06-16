@@ -58,7 +58,11 @@ namespace Aplikacja
                     break;
                 case 2:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new Rezerwacje_());
+                    GridPrincipal.Children.Add(new RezPasow_());
+                    break;
+                case 3:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new DodPas_());
                     break;
                 default:
                     break;

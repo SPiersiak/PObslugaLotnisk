@@ -39,7 +39,7 @@ namespace Aplikacja
            using (var db = new LogRegEntities())
             {
                 int g = usrtype.SelectedIndex;
-                LogReg newItem = new LogReg
+                /*LogReg newItem = new LogReg
                 {
                     Id = db.LogRegs.Count() + 1,
                     username = LoginBox.Text,
@@ -49,21 +49,37 @@ namespace Aplikacja
                 db.LogRegs.Add(newItem);
                 db.SaveChanges();
                 db.Dispose();
-
+                */
             }
 
-                this.Hide();
-            MessageBox.Show("Zarejestrowano");
-            Pasazer pas = new Pasazer();
-            pas.ShowDialog();
+            //this.Hide();
+            //Pasazer pas = new Pasazer();
+            //pas.ShowDialog();
+            //this.Hide();
+
+            //this.Hide();
+            //Przewoznik prz = new Przewoznik();
+            //prz.ShowDialog();
+
+            this.Hide();
+            Lotnisko lot = new Lotnisko();
+            lot.ShowDialog();
+            
 
 
 
         }
 
-        private void Usrtype_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        
+
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
-            
+            Application.Current.Shutdown();
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

@@ -11,13 +11,13 @@
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="450" Width="650">
                 <StackPanel>
-                    <TextBlock Text="Rezerwacje" Foreground="Black" FontSize="25"/>
+                    <TextBlock Text="Rezerwacje" Foreground="Gray" FontSize="25" Margin="10 0 0 0 "/>
                     <StackPanel Margin="10">
-                        <TextBlock Name="name" Text="Imię" FontSize="35" Margin="0,5,0,-1"/>
-                        <TextBlock Name="sname" Text="Nazwisko" FontSize="35"/>
-                        <TextBlock Text="Moje rezerwacje:" FontSize="25" FontFamily="Champagne &amp; Limousines" Margin="5,15,5,5"/>
+                        <TextBlock Name="name" Text="Imię" Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
+                        <TextBlock Name="sname" Text="Nazwisko" Foreground="Gray" FontSize="35"/>
+                        <TextBlock Text="Moje rezerwacje:" Foreground="Gray" FontSize="25" FontFamily="Champagne &amp; Limousines" Margin="0,15,5,5"/>
                         <Border Background="White" CornerRadius="5" Panel.ZIndex="8" Width="Auto">
-                            <DataGrid x:Name="Rezerwacje" Margin="2">
+                            <DataGrid x:Name="Rezw" Margin="2" Height="190" IsReadOnly="True" GridLinesVisibility="Horizontal" >
                                 <!-- Nagłówki tekstowe kolumn-->
                                 <DataGrid.Columns>
                                     <materialDesign:MaterialDataGridTextColumn Header="Lotnisko Startowe" Binding="{Binding LotStart}"/>
@@ -29,7 +29,7 @@
                             </DataGrid>        
                         </Border>
                     </StackPanel>
-                    <Label FontFamily="Champagne &amp; Limousines" Content="Udanej Podróży" FontSize="18" Margin="25"/>
+                    <Label FontFamily="Champagne &amp; Limousines" Content="Udanej Podróży" Foreground="Gray" FontSize="18" Margin="10"/>
                 </StackPanel>
             </StackPanel>
         </materialDesign:TransitioningContent>

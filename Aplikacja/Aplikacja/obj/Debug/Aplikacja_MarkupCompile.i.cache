@@ -10,17 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\App.xaml
-7-2091157497
+12-1061613525
 2193819785
-<<<<<<< HEAD
-23782206857
-24-1012349367
-MainMenu.xaml;MainWindow.xaml;Pasazer.xaml;Register.xaml;Lotnisko.xaml;Rezerwacje_.xaml;
-=======
-24-1589579853
+30603380946
 24-1346590824
-Lotnisko.xaml;MainMenu.xaml;MainWindow.xaml;Pasazer.xaml;Przewoznik.xaml;Register.xaml;Rezerwacje_.xaml;
->>>>>>> 236533464e37351dfc47e8800014a42854ca17f7
+DodajPol_.xaml;DodPas_.xaml;Lotnisko.xaml;MainMenu.xaml;MainWindow.xaml;MojePol_.xaml;Pasazer.xaml;Przewoznik.xaml;Register.xaml;Rezerwacje_.xaml;RezPasow_.xaml;Zarezerwuj_.xaml;
 
-False
+True
 

@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:Aplikacja"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Register" Height="564" Width="500" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Background="#FF410A66">
-    <Grid>
+        Title="Register" Height="564" Width="500" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Background="#FF410A66" WindowStyle="None">
+    <Grid MouseDown="Grid_MouseDown">
+        <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Click="ButtonFechar_Click" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <materialDesign:PackIcon Kind="Close" Width="30" Height="30"/>
+        </Button>
         <StackPanel Margin="50,33,50,50" Grid.Row="1">
             <Border Background="White" Margin="10 20" CornerRadius="5" Height="Auto" Panel.ZIndex="8">
                 <StackPanel Margin="25">
-                    <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Register for free" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
+                    <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Register for free" VerticalAlignment="Top" Width="350" FontSize="36" FontFamily="Segoe UI" Foreground="Gray" TextAlignment="Center"/>
                     <TextBlock HorizontalAlignment="Center" FontSize="20" TextAlignment="Center" Foreground="Gray" Text="and fly wherever you want" FontFamily="Segoe UI Light"/>
-                    <ComboBox x:Name="usrtype" Height="45" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Account type" SelectionChanged="Usrtype_SelectionChanged">
+                    <ComboBox x:Name="usrtype" Height="45" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Account type">
                         <ComboBoxItem TabIndex="0" Content="Passenger" HorizontalAlignment="Left" />
                         <ComboBoxItem TabIndex="2" Content="Airline" HorizontalAlignment="Left" />
                         <ComboBoxItem TabIndex="1" Content="Airport" HorizontalAlignment="Left" />

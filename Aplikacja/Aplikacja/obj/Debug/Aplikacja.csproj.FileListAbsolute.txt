@@ -86,3 +86,13 @@ C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\Aplikacja.csproj.C
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Aplikacja_Content.g.cs
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Przewoznik.g.cs
 C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Przewoznik.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Zarezerwuj_.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\Zarezerwuj_.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\DodajPol_.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\DodajPol_.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\MojePol_.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\MojePol_.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\RezPasow_.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\RezPasow_.baml
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\DodPas_.g.cs
+C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\DodPas_.baml

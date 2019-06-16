@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:Aplikacja"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="400" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Background="#FF410A66">
-    <Grid>
+        Title="MainWindow" Height="600" Width="400" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Background="#FF410A66" WindowStyle="None">
+    <Grid MouseDown="Grid_MouseDown">
+        <Button x:Name="ButtonFechar" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Padding="0" Foreground="Gray" Click="ButtonFechar_Click" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <materialDesign:PackIcon Kind="Close" Width="30" Height="30"/>
+        </Button>
         <StackPanel Margin="50">
             <Ellipse HorizontalAlignment="Center" Width="110.473" Height="109.473" Margin="0,10,0,0">
                 <Ellipse.Fill>

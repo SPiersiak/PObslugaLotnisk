@@ -60,6 +60,10 @@ namespace Aplikacja
                     GridPrincipal.Children.Clear();
                     GridPrincipal.Children.Add(new Rezerwacje_());
                     break;
+                case 3:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new Zarezerwuj_());
+                    break;
                 default:
                     break;
             }

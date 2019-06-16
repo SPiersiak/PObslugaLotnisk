@@ -23,6 +23,34 @@ namespace Aplikacja
         public Rezerwacje_()
         {
             InitializeComponent();
+            name.Text = "Jan";
+            sname.Text = "Niezbędny";
+
+
+            List<Row> data = new List<Row>
+            {
+            new Row { LotStart = "Rzeszów", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
+            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
+            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
+            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
+            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
+            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
+            new Row { LotStart = "Świebodzin", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" }
+            };
+            int x = data.Count;
+            for (int i = 0; i < x; i++)
+            {
+                Rezw.Items.Add(data[i]);
+            }
         }
+    }
+
+    public class Row
+    {
+        public string LotStart { get; set; }
+        public string LotDoc { get; set; }
+        public string DataLot { get; set; }
+        public string LinLot { get; set; }
+        public string NumMiej { get; set; }
     }
 }

@@ -85,6 +85,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BazaClass.cs" />
+    <Compile Include="DodajPol_.xaml.cs">
+      <DependentUpon>DodajPol_.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DodPas_.xaml.cs">
+      <DependentUpon>DodPas_.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Ile_pas.cs">
       <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
@@ -116,6 +122,9 @@
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindowDataModel.cs" />
+    <Compile Include="MojePol_.xaml.cs">
+      <DependentUpon>MojePol_.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pasazer.xaml.cs">
       <DependentUpon>Pasazer.xaml</DependentUpon>
     </Compile>
@@ -131,9 +140,23 @@
     <Compile Include="Rezerwacje_.xaml.cs">
       <DependentUpon>Rezerwacje_.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RezPasow_.xaml.cs">
+      <DependentUpon>RezPasow_.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Zarezerwuj_.xaml.cs">
+      <DependentUpon>Zarezerwuj_.xaml</DependentUpon>
+    </Compile>
     <Compile Include="zar_uzyt.cs">
       <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
+    <Page Include="DodajPol_.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DodPas_.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Lotnisko.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +177,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MojePol_.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pasazer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,6 +194,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Rezerwacje_.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RezPasow_.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Zarezerwuj_.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -209,15 +244,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icons8-airport-96.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons8-clouds-64.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons8-user-96.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icons8-checked-96.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
