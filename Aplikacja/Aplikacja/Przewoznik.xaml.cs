@@ -51,19 +51,23 @@ namespace Aplikacja
             {
                 case 0:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MainMenu());
+                    GridPrincipal.Children.Add(new przewoznikmenu(x,y));
                     break;
                 case 1:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MainMenu());
+                    GridPrincipal.Children.Add(new przewoznikmenuadd(x,y));
                     break;
                 case 2:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MojePol_());
+                    GridPrincipal.Children.Add(new MojePol_(x,y));
                     break;
                 case 3:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new DodajPol_());
+                    GridPrincipal.Children.Add(new DodajPol_(x,y));
+                    break;
+                case 4:
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new RejPas(x,y));
                     break;
                 default:
                     break;

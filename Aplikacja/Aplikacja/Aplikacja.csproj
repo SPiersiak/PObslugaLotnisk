@@ -94,7 +94,7 @@
     <Compile Include="Ile_pas.cs">
       <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="LogReg.cs">
+    <Compile Include="Log.cs">
       <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LogRegModel.Context.cs">
@@ -118,8 +118,23 @@
     <Compile Include="Lotnisko.xaml.cs">
       <DependentUpon>Lotnisko.xaml</DependentUpon>
     </Compile>
+    <Compile Include="lotniskomenu.xaml.cs">
+      <DependentUpon>lotniskomenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="lotniskomenuadd.xaml.cs">
+      <DependentUpon>lotniskomenuadd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="loty.xaml.cs">
+      <DependentUpon>loty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="lot_prze.cs">
+      <DependentUpon>LogRegModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu1.xaml.cs">
+      <DependentUpon>MainMenu1.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindowDataModel.cs" />
     <Compile Include="MojePol_.xaml.cs">
@@ -134,14 +149,29 @@
     <Compile Include="Przewoznik.xaml.cs">
       <DependentUpon>Przewoznik.xaml</DependentUpon>
     </Compile>
+    <Compile Include="przewoznikmenu.xaml.cs">
+      <DependentUpon>przewoznikmenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="przewoznikmenuadd.xaml.cs">
+      <DependentUpon>przewoznikmenuadd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RejPas.xaml.cs">
+      <DependentUpon>RejPas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="rezerwacje.cs">
+      <DependentUpon>LogRegModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Rezerwacje_.xaml.cs">
       <DependentUpon>Rezerwacje_.xaml</DependentUpon>
     </Compile>
     <Compile Include="RezPasow_.xaml.cs">
       <DependentUpon>RezPasow_.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Szczegoly.xaml.cs">
+      <DependentUpon>Szczegoly.xaml</DependentUpon>
     </Compile>
     <Compile Include="Zarezerwuj_.xaml.cs">
       <DependentUpon>Zarezerwuj_.xaml</DependentUpon>
@@ -161,7 +191,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="lotniskomenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lotniskomenuadd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="loty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainMenu1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,7 +235,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="przewoznikmenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="przewoznikmenuadd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RejPas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -198,6 +256,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RezPasow_.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Szczegoly.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

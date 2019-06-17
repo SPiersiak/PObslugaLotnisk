@@ -24,5 +24,7 @@ namespace Aplikacja
         public long Koszt { get; set; }
         public string Zarezerwowane { get; set; }
         public Nullable<long> Id_lot { get; set; }
+        public string Id_prze { get; set; }
+        public string Nr_lot { get; set; }
     }
 }

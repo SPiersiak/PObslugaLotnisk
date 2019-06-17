@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
+using System.Data.SQLite;
 
 namespace Aplikacja
 {
@@ -20,27 +22,32 @@ namespace Aplikacja
     /// </summary>
     public partial class MojePol_ : UserControl
     {
+        string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
+        string x;
+        string y;
         public MojePol_()
         {
             InitializeComponent();
             Linia.Text = "LOT";
-
-
-            List<Lista> data = new List<Lista>
+        }
+        public MojePol_(string id, string typ):this()
+        {
+            x = id;
+            y = typ;
+            SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
+            sqlcon.Open();
+            string query = "SELECT Nr_lot, Z, DO, Cz_trwania, Przesiadki FROM przewoznik WHERE Id_prze ='" + x + "'";
+            SQLiteCommand com = new SQLiteCommand(query, sqlcon);
+            com.ExecuteNonQuery();
+            SQLiteDataReader dr = com.ExecuteReader();
+            int count = 0;
+            while (dr.Read())
             {
-            new Lista {NrLot="FR2136", LotStart = "Rzeszów", LotDoc = "Warszawa", DataLot = "22-06-2019", GodzLot = "15:25", Sam = "1" },
-            new Lista {NrLot="FR2136", LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", GodzLot = "12:25", Sam = "2" },
-            new Lista {NrLot="FR2136", LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", GodzLot = "12:25", Sam = "3" },
-            new Lista {NrLot="FR2136", LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", GodzLot = "12:25", Sam = "4" },
-            new Lista {NrLot="FR2136", LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", GodzLot = "12:25", Sam = "5" },
-            new Lista {NrLot="FR2136", LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", GodzLot = "12:25", Sam = "6" },
-            new Lista {NrLot="FR2136", LotStart = "Świebodzin", LotDoc = "Warszawa", DataLot = "22-06-2019", GodzLot = "13:15",Sam = "7" }
-            };
-            int x = data.Count;
-            for (int i = 0; i < x; i++)
-            {
-                Pol.Items.Add(data[i]);
+                count++;
+                Lista nazwa = new Lista { NrLot = dr["Nr_lot"].ToString(), LotStart = dr["Z"].ToString(), LotDoc = dr["DO"].ToString(), Ctrw = dr["Cz_trwania"].ToString(), Prze = dr["Przesiadki"].ToString() };
+                Pol.Items.Add(nazwa);
             }
+            sqlcon.Close();
         }
     }
 
@@ -49,8 +56,7 @@ namespace Aplikacja
         public string NrLot { get; set; }
         public string LotStart { get; set; }
         public string LotDoc { get; set; }
-        public string DataLot { get; set; }
-        public string GodzLot { get; set; }
-        public string Sam { get; set; }
+        public string Ctrw { get; set; }
+        public string Prze { get; set; }
     }
 }

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
+using System.Data.SQLite;
 
 namespace Aplikacja
 {
@@ -20,11 +22,11 @@ namespace Aplikacja
     /// </summary>
     public partial class Rezerwacje_ : UserControl
     {
+        string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
+        string x;
         public Rezerwacje_()
         {
             InitializeComponent();
-            name.Text = "Jan";
-            sname.Text = "Niezbędny";
 
 
             List<Row> data = new List<Row>
@@ -43,7 +45,38 @@ namespace Aplikacja
                 Rezw.Items.Add(data[i]);
             }
         }
+        public Rezerwacje_(string id) : this()
+        {
+            x = id;
+            string N = "Nie podano";
+            string LN = "Nie podano";
+            SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
+            sqlcon.Open();
+            string query = "SELECT * FROM zar_uzyt WHERE Id_user = '" + x + "'";
+            SQLiteCommand com = new SQLiteCommand(query, sqlcon);
+            com.ExecuteNonQuery();
+            SQLiteDataReader dr = com.ExecuteReader();
+            int count = 0;
+            while (dr.Read())
+            {
+                count++;
+                N = dr["Name"].ToString();
+                LN = dr["LastName"].ToString();
+            }
+            if (count == 1)
+            {
+                name.Text = N;
+                sname.Text = LN;
+            }
+            else
+            {
+                name.Text = N;
+                sname.Text = LN;
+            }
+            sqlcon.Close();
+        }
     }
+    
 
     public class Row
     {

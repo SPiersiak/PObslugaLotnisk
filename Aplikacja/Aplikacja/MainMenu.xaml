@@ -11,31 +11,17 @@
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="450" Width="400">
                 <StackPanel>
-                    <TextBlock Text="Menu główne" Margin="10 0 0 0" Foreground="Gray" FontSize="25"/>
                     <StackPanel Margin="10">
-                        <TextBlock Name="name" Text="Imię" Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
-                        <TextBlock Name="sname" Text="Nazwisko" Foreground="Gray" FontSize="35"/>
-                        <TextBlock Text="Następna podróż:" FontSize="25" Foreground="Gray" FontFamily="Champagne &amp; Limousines" Margin="5,15,5,5"/>
+                        <TextBox Name="name" Text="Imię" Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
+                        <TextBox Name="sname" Text="Nazwisko" Foreground="Gray" FontSize="35"/>
+                        <Button x:Name="Aktualizuj" Content="Aktualizuj" Padding="35 0 35 0" Click="Akt"  Margin="15 05" FontSize="16"/>
                         <Border Background="#2196F3" CornerRadius="5" Panel.ZIndex="8" Width="367">
-                            <StackPanel Orientation="Horizontal">
-                            <StackPanel Orientation="Vertical">
-                                <Label Content="Wylot z:" FontSize="20" Margin="0,5,0,0"/>
-                                <Label Content="Cel Podróży:" FontSize="20"/>
-                                <Label Content="Data Wylotu:" FontSize="20"/>
-                                <Label Content="Linie Lotnicze:" FontSize="20"/>
-                                <Label Content="Numer Miejsca:" FontSize="20"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" >
-                                <Label x:Name="wyl" Content="Dane" FontSize="20" Margin="0,5,0,0"/>
-                                <Label x:Name="cel" Content="Dane" FontSize="20"/>
-                                <Label x:Name="date" Content="Dane" FontSize="20"/>
-                                <Label x:Name="lin" Content="Dane" FontSize="20"/>
-                                <Label x:Name="seat" Content="Dane" FontSize="20"/>
-                            </StackPanel>
-                        </StackPanel>
                         </Border>
+                        <TextBlock Name="imie" Text="Imie" Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
+                        <TextBlock Name="imie2"  Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
+                        <TextBlock Name="nazwisko" Text="Nazwisko"  Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
+                        <TextBlock Name="nazwisko2"  Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
                     </StackPanel>
-                    <Label FontFamily="Champagne &amp; Limousines" Content="Życzymy udanej podróży" Foreground="Gray" FontSize="18" Margin="25"/>
                 </StackPanel>
             </StackPanel>
         </materialDesign:TransitioningContent>

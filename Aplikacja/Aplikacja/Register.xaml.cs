@@ -39,28 +39,18 @@ namespace Aplikacja
            using (var db = new LogRegEntities())
             {
                 int g = usrtype.SelectedIndex;
-                /*LogReg newItem = new LogReg
+                Log newItem = new Log
                 {
-                    Id = db.LogRegs.Count() + 1,
+                    Id = db.Logs.Count() + 1,
                     username = LoginBox.Text,
                     password = Password.Password,
                     specification = g,
                 };
-                db.LogRegs.Add(newItem);
+                db.Logs.Add(newItem);
                 db.SaveChanges();
                 db.Dispose();
-                */
+                
             }
-
-            //this.Hide();
-            //Pasazer pas = new Pasazer();
-            //pas.ShowDialog();
-            //this.Hide();
-
-            //this.Hide();
-            //Przewoznik prz = new Przewoznik();
-            //prz.ShowDialog();
-
             this.Hide();
             Lotnisko lot = new Lotnisko();
             lot.ShowDialog();

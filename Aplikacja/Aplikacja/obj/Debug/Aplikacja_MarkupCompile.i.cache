@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\obj\Debug\
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\obj\Debug\
 Aplikacja
 none
 false
 DEBUG;TRACE
-C:\Users\irek4\OneDrive\Documents\GitHub\Projekt-Programowanie\Aplikacja\Aplikacja\App.xaml
-12-1061613525
+C:\Users\piers\Documents\GitHub\Aplikacja\Aplikacja\App.xaml
+20377905844
 2193819785
-30603380946
-24-1346590824
-DodajPol_.xaml;DodPas_.xaml;Lotnisko.xaml;MainMenu.xaml;MainWindow.xaml;MojePol_.xaml;Pasazer.xaml;Przewoznik.xaml;Register.xaml;Rezerwacje_.xaml;RezPasow_.xaml;Zarezerwuj_.xaml;
+40-1452254338
+24-1012349367
+DodajPol_.xaml;DodPas_.xaml;Lotnisko.xaml;lotniskomenu.xaml;lotniskomenuadd.xaml;loty.xaml;MainMenu.xaml;MainMenu1.xaml;MainWindow.xaml;MojePol_.xaml;Pasazer.xaml;Przewoznik.xaml;przewoznikmenu.xaml;przewoznikmenuadd.xaml;Register.xaml;RejPas.xaml;Rezerwacje_.xaml;RezPasow_.xaml;Szczegoly.xaml;Zarezerwuj_.xaml;
 
-True
+False
 

@@ -20,9 +20,8 @@
                                     <materialDesign:MaterialDataGridTextColumn Header="Nr Lotu" Binding="{Binding NrLot}"/>
                                     <materialDesign:MaterialDataGridTextColumn Header="Lotnisko Startowe" Binding="{Binding LotStart}"/>
                                     <materialDesign:MaterialDataGridTextColumn Header="Lotnisko Docelowe" Binding="{Binding LotDoc}"/>
-                                    <materialDesign:MaterialDataGridTextColumn Header="Data Lotu" Binding="{Binding DataLot}"/>
-                                    <materialDesign:MaterialDataGridTextColumn Header="Godzina Lotu" Binding="{Binding GodzLot}"/>
-                                    <materialDesign:MaterialDataGridTextColumn Header="Samolot" Binding="{Binding Sam}"/>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Data Lotu" Binding="{Binding Ctrw}"/>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Godzina Lotu" Binding="{Binding Prze}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </Border>

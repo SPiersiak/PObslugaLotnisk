@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Data.Entity;
 using System.Data.SQLite;
 
+
 namespace Aplikacja
 {
     /// <summary>
@@ -27,9 +28,9 @@ namespace Aplikacja
             InitializeComponent();
 
         }
-        
-        string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
 
+
+        string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
 
         public void Login_Click1(object sender, RoutedEventArgs e)
         {
@@ -71,24 +72,16 @@ namespace Aplikacja
                             case 1:
                                 this.Hide();
                                 MessageBox.Show("Zalogowano");
-                                Lotnisko lot = new Lotnisko(id,typ);
-                                lot.ShowDialog();
+                                Przewoznik prz = new Przewoznik(id, typ);
+                                prz.ShowDialog();
                                 break;
                             case 2:
                                 this.Hide();
                                 MessageBox.Show("Zalogowano");
-                                Przewoznik prz = new Przewoznik(id,typ);
-                                prz.ShowDialog();
+                                Lotnisko lot = new Lotnisko(id, typ);
+                                lot.ShowDialog();
                                 break;
                         }
-
-
-                       /* BazaClass cos = new BazaClass();
-                        cos.Id = Convert.ToInt32(id);
-                        cos.Typ = Convert.ToInt32(typ);
-                        Register reg = new Register(id, typ);
-                        reg.ShowDialog();
-                        this.Hide(); */
                     }
 
                     if(count < 1)
@@ -98,6 +91,7 @@ namespace Aplikacja
                         Login1.Clear();
                         Password.Clear();
                     }
+                    sqlcon.Close();
                 }
                 catch(Exception)
                 {

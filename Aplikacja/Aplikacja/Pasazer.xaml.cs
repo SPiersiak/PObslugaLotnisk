@@ -50,19 +50,19 @@ namespace Aplikacja
             {
                 case 0:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MainMenu());
+                    GridPrincipal.Children.Add(new MainMenu1(x,y));
                     break;
                 case 1:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MainMenu());
+                    GridPrincipal.Children.Add(new MainMenu(x,y));
                     break;
                 case 2:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new Rezerwacje_());
+                    GridPrincipal.Children.Add(new Rezerwacje_(x));
                     break;
                 case 3:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new Zarezerwuj_());
+                    GridPrincipal.Children.Add(new Zarezerwuj_(x));
                     break;
                 default:
                     break;
@@ -73,6 +73,11 @@ namespace Aplikacja
         {
             TrainsitionigContentSlide.OnApplyTemplate();
             GridCursor.Margin = new Thickness(0, (100 + (60 * index)), 0, 0);
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

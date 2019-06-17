@@ -1,0 +1,52 @@
+﻿<Window x:Class="Aplikacja.Szczegoly"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacja"
+        mc:Ignorable="d"
+ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="650" Width="500">
+    <Grid  Height="650" Width="500">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="650" Width="400">
+                <StackPanel>
+                    <StackPanel Margin="10">
+                        <Border Background="#2196F3" CornerRadius="5" Panel.ZIndex="8" Width="367">
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel Orientation="Vertical">
+                                    <Label Content="Nr lotu:" FontSize="20" Margin="0,5,0,0"/>
+                                    <Label Content="Wylot z:" FontSize="20" Margin="0,5,0,0"/>
+                                    <Label Content="Cel Podróży:" FontSize="20"/>
+                                    <Label Content="Data Wylotu:" FontSize="20"/>
+                                    <Label Content="Godzina Wylotu:" FontSize="20"/>
+                                    <Label Content="Koszty bagażów do 25kg:" FontSize="20"/>
+                                    <Label Content="Koszty bagażów Powyżej 25kg:" FontSize="20"/>
+                                    <Label Content="Koszty Klasy ekonomicznej:" FontSize="20"/>
+                                    <Label Content="Koszty Klasy biznes:" FontSize="20"/>
+                                    <Label Content="Koszty Pierwszej klasy:" FontSize="20"/>
+                                    <Label Content="Przesiadki:" FontSize="20"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" >
+                                    <Label x:Name="nrlot" Content="Dane" FontSize="20" Margin="0,5,0,0"/>
+                                    <Label x:Name="wyl" Content="Dane" FontSize="20" Margin="0,5,0,0"/>
+                                    <Label x:Name="cel" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="date" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="god" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="do25" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="pow25" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="eko" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="bi" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="pi" Content="Dane" FontSize="20"/>
+                                    <Label x:Name="prze" Content="Dane" FontSize="20"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <Button x:Name="Rezerwacja" Content="Zarezerwuj" Padding="35 0 35 0" Click="Rezerwacja_Click"  Margin=" 05" FontSize="16"/>
+                    <Label FontFamily="Champagne &amp; Limousines" Content="Życzymy udanej podróży" Foreground="Gray" FontSize="18" Margin="25"/>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</Window>

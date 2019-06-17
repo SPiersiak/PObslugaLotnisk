@@ -17,5 +17,7 @@ namespace Aplikacja
         public long Id { get; set; }
         public long Id_lot { get; set; }
         public long Ile_pas1 { get; set; }
+        public Nullable<long> typ { get; set; }
+        public Nullable<long> pas_wol { get; set; }
     }
 }

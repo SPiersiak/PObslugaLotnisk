@@ -13,11 +13,13 @@
                 <Border Background="White" Margin="0 50 0 0" CornerRadius="5" Height="Auto" Panel.ZIndex="8">
                     <StackPanel Margin="25">
                         <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Dodaj Pas Startowy" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Numer zostanie nadany automatycznie" VerticalAlignment="Top" Width="350" FontSize="15" Foreground="Gray" TextAlignment="Center"/>
-                        <TextBox x:Name="PasSize" Text="{Binding PasSize}" Margin="15" Width="300" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Długość Pasa (m):"/>
-                        <TextBox x:Name="Cena" Text="{Binding PasSize}" Margin="15" Width="300" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Cena Rezerwacji (zł):"/>
-
                         
+                        <TextBox x:Name="ile" Text="{Binding PasSize}" Margin="15" Width="300" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Ile Pasow:"/>
+                        <ComboBox x:Name="rodzaj" Text="{Binding PasSize}" Margin="15" Width="300" Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Rodzaj pasa:">
+                            <ComboBoxItem TabIndex="0" Content="Mały" HorizontalAlignment="Left" />
+                            <ComboBoxItem TabIndex="1" Content="Średni" HorizontalAlignment="Left" />
+                            <ComboBoxItem TabIndex="2" Content="Duży" HorizontalAlignment="Left" />
+                        </ComboBox>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
                             <Button x:Name="Add" Content="Dodaj Pas Startowy" Padding="35 0 35 0" Click="Add_Click"  Margin="15 05" FontSize="16"/>
                         </StackPanel>

@@ -26,9 +26,11 @@ namespace Aplikacja
         }
     
         public virtual DbSet<Ile_pas> Ile_pas { get; set; }
-        public virtual DbSet<LogReg> LogRegs { get; set; }
         public virtual DbSet<lotnisko> lotniskoes { get; set; }
         public virtual DbSet<przewoznik> przewozniks { get; set; }
         public virtual DbSet<zar_uzyt> zar_uzyt { get; set; }
+        public virtual DbSet<Log> Logs { get; set; }
+        public virtual DbSet<lot_prze> lot_prze { get; set; }
+        public virtual DbSet<rezerwacje> rezerwacjes { get; set; }
     }
 }

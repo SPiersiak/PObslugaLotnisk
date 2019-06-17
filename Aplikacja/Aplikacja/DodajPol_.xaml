@@ -12,43 +12,34 @@
             <StackPanel Grid.Row="1">
                 <Border Background="White" Margin="0 50 0 0" CornerRadius="5" Height="Auto" Panel.ZIndex="8">
                     <StackPanel Margin="25">
-                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Dodaj Połączenie" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Nowe Połączenie" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
                         <StackPanel Orientation="Horizontal">
-                            <ComboBox x:Name="LotStart" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Lotnisko Startowe">
-                                <ComboBoxItem TabIndex="0" Content="Rzeszów" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="2" Content="Kraków" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="1" Content="Warszawa" HorizontalAlignment="Left" />
-                            </ComboBox>
-                            <ComboBox x:Name="LotDoc" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Lotnisko Docelowe">
-                                <ComboBoxItem TabIndex="0" Content="Berlin" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="2" Content="Ateny" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="1" Content="Londyn" HorizontalAlignment="Left" />
-                            </ComboBox>
-                            <ComboBox x:Name="Pas" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Wybierz Pas:">
-                                <ComboBoxItem TabIndex="0" Content="Boeing 737-800" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="1" Content="Airbus A380" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="2" Content="Airbus A320" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="3" Content="Boeing 787 Dreamliner" HorizontalAlignment="Left" />
-                            </ComboBox>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <ComboBox x:Name="Samolot" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Wybierz samolot:">
-                                <ComboBoxItem TabIndex="0" Content="Boeing 737-800" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="1" Content="Airbus A380" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="2" Content="Airbus A320" HorizontalAlignment="Left" />
-                                <ComboBoxItem TabIndex="3" Content="Boeing 787 Dreamliner" HorizontalAlignment="Left" />
-                            </ComboBox>
-                            <DatePicker x:Name="Date" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" materialDesign:HintAssist.Hint="Wybierz datę:" >
+                            <TextBox x:Name="Z" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Lotnisko Startowe"/>
+                            <TextBox x:Name="Do" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Lotnisko Docelowe"/>
+                                <ComboBox x:Name="Prz" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Z przesiadkami?">
+                                <ComboBoxItem TabIndex="0" Content="Nie" HorizontalAlignment="Left" />
+                                <ComboBoxItem TabIndex="1" Content="Tak" HorizontalAlignment="Left" />
 
-                            </DatePicker>
-                            <materialDesign:TimePicker Is24Hours="True" Height="45" Width="170" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTimePicker}" materialDesign:HintAssist.Hint="Wybierz godzinę:  "></materialDesign:TimePicker>
+                            </ComboBox>
                         </StackPanel>
-                        <TextBlock HorizontalAlignment="Left" Margin="16 10 0 0" TextWrapping="Wrap" Text="Ceny Biletów:" VerticalAlignment="Top" Width="350" FontSize="13" Foreground="Gray" TextAlignment="Left"/>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox x:Name="ek" Text="{Binding Login}" Margin="15" Width="125" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint=" Klasa Ekonomiczna"/>
-                            <TextBox x:Name="ekpl" Text="{Binding Login}" Margin="15" Width="154" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Klasa Ekonomiczna plus"/>
-                            <TextBox x:Name="biz" Text="{Binding Login}" Margin="15" Width="95" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Klasa Biznes"/>
-                            <TextBox x:Name="firs" Text="{Binding Login}" Margin="15" Width="105" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Pierwsza klasa"/>
+                            <TextBox x:Name="l_miej" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Liczba miejsc:"/>
+                            <materialDesign:TimePicker x:Name="zegar" Is24Hours="True" Height="45" Width="170" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTimePicker}" materialDesign:HintAssist.Hint="Wybierz czas lotu:  "></materialDesign:TimePicker>
+                            <TextBox x:Name="nrlot"  Margin="15" Width="170" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Numer Lotu:"/>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock HorizontalAlignment="Left" Margin="16 10 0 0" TextWrapping="Wrap" Text="Ceny Biletów:" VerticalAlignment="Top" Width="385" FontSize="13" Foreground="Gray" TextAlignment="Left"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="16 10 0 0" TextWrapping="Wrap" Text="Ceny Bagaży:" VerticalAlignment="Top" Width="100" FontSize="13" Foreground="Gray" TextAlignment="Left"/>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="ek"  Margin="15" Width="170" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Klasa Ekonomiczna"/>
+                            <TextBox x:Name="biz"  Margin="15" Width="170" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Klasa Biznes"/>
+                            <TextBox x:Name="do25"  Margin="15" Width="150" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Cena małego bagażu:"/>
+                        </StackPanel><StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="firs" Margin="15" Width="370" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Pierwsza klasa"/>
+                            <TextBox x:Name="pow25" Margin="15" Width="125" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Cena dużego bagażu"/>
 
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">

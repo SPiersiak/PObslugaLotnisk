@@ -15,15 +15,17 @@ namespace Aplikacja
     public partial class przewoznik
     {
         public long Id { get; set; }
-        public string AddLot { get; set; }
         public long K_kl_pierwszej { get; set; }
         public long K_kl_biznesowej { get; set; }
         public long K_kl_ekonomicznej { get; set; }
         public long K_bag_do25 { get; set; }
-        public long K_bag_pow25 { get; set; }
         public long I_miejsc { get; set; }
         public string Cz_trwania { get; set; }
         public string Przesiadki { get; set; }
         public Nullable<long> Id_prze { get; set; }
+        public string Z { get; set; }
+        public string DO { get; set; }
+        public long K_bag_pow25 { get; set; }
+        public string Nr_lot { get; set; }
     }
 }

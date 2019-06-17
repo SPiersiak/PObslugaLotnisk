@@ -4,25 +4,19 @@
     <EntitySetMapping Name="Ile_pas">
       <EntityTypeMapping TypeName="LogRegModel.Ile_pas">
         <MappingFragment StoreEntitySet="Ile_pas">
+          <ScalarProperty Name="pas_wol" ColumnName="pas_wol" />
+          <ScalarProperty Name="typ" ColumnName="typ" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Id_lot" ColumnName="Id_lot" />
           <ScalarProperty Name="Ile_pas1" ColumnName="Ile_pas" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LogRegs">
-      <EntityTypeMapping TypeName="LogRegModel.LogReg">
-        <MappingFragment StoreEntitySet="LogReg">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="username" ColumnName="username" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="specification" ColumnName="specification" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="lotniskoes">
       <EntityTypeMapping TypeName="LogRegModel.lotnisko">
         <MappingFragment StoreEntitySet="lotnisko">
+          <ScalarProperty Name="Nr_lot" ColumnName="Nr_lot" />
+          <ScalarProperty Name="Id_prze" ColumnName="Id_prze" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nazwa_Lot" ColumnName="Nazwa_Lot" />
           <ScalarProperty Name="Adres" ColumnName="Adres" />
@@ -39,13 +33,15 @@
     <EntitySetMapping Name="przewozniks">
       <EntityTypeMapping TypeName="LogRegModel.przewoznik">
         <MappingFragment StoreEntitySet="przewoznik">
+          <ScalarProperty Name="Nr_lot" ColumnName="Nr_lot" />
+          <ScalarProperty Name="K_bag_pow25" ColumnName="K_bag_pow25" />
+          <ScalarProperty Name="DO" ColumnName="DO" />
+          <ScalarProperty Name="Z" ColumnName="Z" />
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="AddLot" ColumnName="AddLot" />
           <ScalarProperty Name="K_kl_pierwszej" ColumnName="K_kl_pierwszej" />
           <ScalarProperty Name="K_kl_biznesowej" ColumnName="K_kl_biznesowej" />
           <ScalarProperty Name="K_kl_ekonomicznej" ColumnName="K_kl_ekonomicznej" />
           <ScalarProperty Name="K_bag_do25" ColumnName="K_bag_do25" />
-          <ScalarProperty Name="K_bag_pow25" ColumnName="K-bag_pow25" />
           <ScalarProperty Name="I_miejsc" ColumnName="I_miejsc" />
           <ScalarProperty Name="Cz_trwania" ColumnName="Cz_trwania" />
           <ScalarProperty Name="Przesiadki" ColumnName="Przesiadki" />
@@ -56,9 +52,39 @@
     <EntitySetMapping Name="zar_uzyt">
       <EntityTypeMapping TypeName="LogRegModel.zar_uzyt">
         <MappingFragment StoreEntitySet="zar_uzyt">
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Id_lot" ColumnName="Id_lot" />
           <ScalarProperty Name="Id_user" ColumnName="Id_user" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="LogRegModel.Log">
+        <MappingFragment StoreEntitySet="Log">
+          <ScalarProperty Name="specification" ColumnName="specification" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lot_prze">
+      <EntityTypeMapping TypeName="LogRegModel.lot_prze">
+        <MappingFragment StoreEntitySet="lot_prze">
+          <ScalarProperty Name="opis" ColumnName="opis" />
+          <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+          <ScalarProperty Name="id_us" ColumnName="id_us" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rezerwacjes">
+      <EntityTypeMapping TypeName="LogRegModel.rezerwacje">
+        <MappingFragment StoreEntitySet="rezerwacje">
+          <ScalarProperty Name="nr_lotu" ColumnName="nr_lotu" />
+          <ScalarProperty Name="id_uzyt" ColumnName="id_uzyt" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

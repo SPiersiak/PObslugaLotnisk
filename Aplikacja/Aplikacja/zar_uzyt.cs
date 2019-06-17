@@ -15,7 +15,8 @@ namespace Aplikacja
     public partial class zar_uzyt
     {
         public long Id { get; set; }
-        public long Id_lot { get; set; }
         public Nullable<long> Id_user { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
     }
 }

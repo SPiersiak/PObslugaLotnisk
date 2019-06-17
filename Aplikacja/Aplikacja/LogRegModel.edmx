@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="LogRegModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="LogRegModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ile_pas">
           <Key>
             <PropertyRef Name="Id" />
@@ -12,8 +12,10 @@
           <Property Name="Id" Type="integer" Nullable="false" />
           <Property Name="Id_lot" Type="integer" Nullable="false" />
           <Property Name="Ile_pas" Type="integer" Nullable="false" />
+          <Property Name="typ" Type="integer" />
+          <Property Name="pas_wol" Type="integer" />
         </EntityType>
-        <EntityType Name="LogReg">
+        <EntityType Name="Log">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -22,11 +24,20 @@
           <Property Name="password" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="specification" Type="integer" Nullable="false" />
         </EntityType>
-        <EntityType Name="lotnisko">
+        <EntityType Name="lot_prze">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="integer" Nullable="false" />
+          <Property Name="id_us" Type="integer" Nullable="false" />
+          <Property Name="Nazwa" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="opis" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lotnisko">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nazwa_Lot" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="Adres" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="Dzien" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
@@ -36,40 +47,54 @@
           <Property Name="Koszt" Type="integer" Nullable="false" />
           <Property Name="Zarezerwowane" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="Id_lot" Type="integer" />
+          <Property Name="Id_prze" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Nr_lot" Type="nvarchar" MaxLength="2147483647" />
         </EntityType>
         <EntityType Name="przewoznik">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="integer" Nullable="false" />
-          <Property Name="AddLot" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="K_kl_pierwszej" Type="integer" Nullable="false" />
           <Property Name="K_kl_biznesowej" Type="integer" Nullable="false" />
           <Property Name="K_kl_ekonomicznej" Type="integer" Nullable="false" />
           <Property Name="K_bag_do25" Type="integer" Nullable="false" />
-          <Property Name="K-bag_pow25" Type="integer" Nullable="false" />
+          <Property Name="K_bag_pow25" Type="integer" Nullable="false" />
           <Property Name="I_miejsc" Type="integer" Nullable="false" />
           <Property Name="Cz_trwania" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="Przesiadki" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
           <Property Name="Id_prze" Type="integer" />
+          <Property Name="Z" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="DO" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="Nr_lot" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="rezerwacje">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="integer" Nullable="false" />
+          <Property Name="id_uzyt" Type="integer" Nullable="false" />
+          <Property Name="nr_lotu" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
         </EntityType>
         <EntityType Name="zar_uzyt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="integer" Nullable="false" />
-          <Property Name="Id_lot" Type="integer" Nullable="false" />
+          <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Id_user" Type="integer" />
+          <Property Name="Name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="2147483647" />
         </EntityType>
         <EntityContainer Name="LogRegModelStoreContainer">
           <EntitySet Name="Ile_pas" EntityType="Self.Ile_pas" store:Type="Tables" />
-          <EntitySet Name="LogReg" EntityType="Self.LogReg" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" store:Type="Tables" />
+          <EntitySet Name="lot_prze" EntityType="Self.lot_prze" store:Type="Tables" />
           <EntitySet Name="lotnisko" EntityType="Self.lotnisko" store:Type="Tables" />
           <EntitySet Name="przewoznik" EntityType="Self.przewoznik" store:Type="Tables" />
+          <EntitySet Name="rezerwacje" EntityType="Self.rezerwacje" store:Type="Tables" />
           <EntitySet Name="zar_uzyt" EntityType="Self.zar_uzyt" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="LogRegModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -80,15 +105,8 @@
           <Property Name="Id" Type="Int64" Nullable="false" />
           <Property Name="Id_lot" Type="Int64" Nullable="false" />
           <Property Name="Ile_pas1" Type="Int64" Nullable="false" />
-        </EntityType>
-        <EntityType Name="LogReg">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" />
-          <Property Name="username" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="password" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="specification" Type="Int64" Nullable="false" />
+          <Property Name="typ" Type="Int64" />
+          <Property Name="pas_wol" Type="Int64" />
         </EntityType>
         <EntityType Name="lotnisko">
           <Key>
@@ -104,38 +122,71 @@
           <Property Name="Koszt" Type="Int64" Nullable="false" />
           <Property Name="Zarezerwowane" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id_lot" Type="Int64" />
+          <Property Name="Id_prze" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="Nr_lot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="przewoznik">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int64" Nullable="false" />
-          <Property Name="AddLot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="K_kl_pierwszej" Type="Int64" Nullable="false" />
           <Property Name="K_kl_biznesowej" Type="Int64" Nullable="false" />
           <Property Name="K_kl_ekonomicznej" Type="Int64" Nullable="false" />
           <Property Name="K_bag_do25" Type="Int64" Nullable="false" />
-          <Property Name="K_bag_pow25" Type="Int64" Nullable="false" />
           <Property Name="I_miejsc" Type="Int64" Nullable="false" />
           <Property Name="Cz_trwania" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Przesiadki" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Id_prze" Type="Int64" />
+          <Property Name="Z" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="DO" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="K_bag_pow25" Type="Int64" Nullable="false" />
+          <Property Name="Nr_lot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="zar_uzyt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int64" Nullable="false" />
-          <Property Name="Id_lot" Type="Int64" Nullable="false" />
           <Property Name="Id_user" Type="Int64" />
+          <Property Name="Name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="LogRegEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Ile_pas" EntityType="Self.Ile_pas" />
-          <EntitySet Name="LogRegs" EntityType="Self.LogReg" />
           <EntitySet Name="lotniskoes" EntityType="Self.lotnisko" />
           <EntitySet Name="przewozniks" EntityType="Self.przewoznik" />
           <EntitySet Name="zar_uzyt" EntityType="Self.zar_uzyt" />
+          <EntitySet Name="Logs" EntityType="LogRegModel.Log" />
+          <EntitySet Name="lot_prze" EntityType="LogRegModel.lot_prze" />
+          <EntitySet Name="rezerwacjes" EntityType="LogRegModel.rezerwacje" />
         </EntityContainer>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="specification" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lot_prze">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="id_us" Type="Int64" Nullable="false" />
+          <Property Name="Nazwa" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="opis" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="rezerwacje">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" />
+          <Property Name="id_uzyt" Type="Int64" Nullable="false" />
+          <Property Name="nr_lotu" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -145,25 +196,19 @@
           <EntitySetMapping Name="Ile_pas">
             <EntityTypeMapping TypeName="LogRegModel.Ile_pas">
               <MappingFragment StoreEntitySet="Ile_pas">
+                <ScalarProperty Name="pas_wol" ColumnName="pas_wol" />
+                <ScalarProperty Name="typ" ColumnName="typ" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Id_lot" ColumnName="Id_lot" />
                 <ScalarProperty Name="Ile_pas1" ColumnName="Ile_pas" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="LogRegs">
-            <EntityTypeMapping TypeName="LogRegModel.LogReg">
-              <MappingFragment StoreEntitySet="LogReg">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="specification" ColumnName="specification" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="lotniskoes">
             <EntityTypeMapping TypeName="LogRegModel.lotnisko">
               <MappingFragment StoreEntitySet="lotnisko">
+                <ScalarProperty Name="Nr_lot" ColumnName="Nr_lot" />
+                <ScalarProperty Name="Id_prze" ColumnName="Id_prze" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Nazwa_Lot" ColumnName="Nazwa_Lot" />
                 <ScalarProperty Name="Adres" ColumnName="Adres" />
@@ -180,13 +225,15 @@
           <EntitySetMapping Name="przewozniks">
             <EntityTypeMapping TypeName="LogRegModel.przewoznik">
               <MappingFragment StoreEntitySet="przewoznik">
+                <ScalarProperty Name="Nr_lot" ColumnName="Nr_lot" />
+                <ScalarProperty Name="K_bag_pow25" ColumnName="K_bag_pow25" />
+                <ScalarProperty Name="DO" ColumnName="DO" />
+                <ScalarProperty Name="Z" ColumnName="Z" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="AddLot" ColumnName="AddLot" />
                 <ScalarProperty Name="K_kl_pierwszej" ColumnName="K_kl_pierwszej" />
                 <ScalarProperty Name="K_kl_biznesowej" ColumnName="K_kl_biznesowej" />
                 <ScalarProperty Name="K_kl_ekonomicznej" ColumnName="K_kl_ekonomicznej" />
                 <ScalarProperty Name="K_bag_do25" ColumnName="K_bag_do25" />
-                <ScalarProperty Name="K_bag_pow25" ColumnName="K-bag_pow25" />
                 <ScalarProperty Name="I_miejsc" ColumnName="I_miejsc" />
                 <ScalarProperty Name="Cz_trwania" ColumnName="Cz_trwania" />
                 <ScalarProperty Name="Przesiadki" ColumnName="Przesiadki" />
@@ -197,9 +244,39 @@
           <EntitySetMapping Name="zar_uzyt">
             <EntityTypeMapping TypeName="LogRegModel.zar_uzyt">
               <MappingFragment StoreEntitySet="zar_uzyt">
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Id_lot" ColumnName="Id_lot" />
                 <ScalarProperty Name="Id_user" ColumnName="Id_user" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="LogRegModel.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="specification" ColumnName="specification" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lot_prze">
+            <EntityTypeMapping TypeName="LogRegModel.lot_prze">
+              <MappingFragment StoreEntitySet="lot_prze">
+                <ScalarProperty Name="opis" ColumnName="opis" />
+                <ScalarProperty Name="Nazwa" ColumnName="Nazwa" />
+                <ScalarProperty Name="id_us" ColumnName="id_us" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rezerwacjes">
+            <EntityTypeMapping TypeName="LogRegModel.rezerwacje">
+              <MappingFragment StoreEntitySet="rezerwacje">
+                <ScalarProperty Name="nr_lotu" ColumnName="nr_lotu" />
+                <ScalarProperty Name="id_uzyt" ColumnName="id_uzyt" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

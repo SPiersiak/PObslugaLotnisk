@@ -5,40 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Aplikacja"
              mc:Ignorable="d"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              d:DesignHeight="450" d:DesignWidth="650">
     <Grid>
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
             <StackPanel Grid.Row="1">
-            <Border Background="White" Margin="0 70 0 0" CornerRadius="5" Height="Auto" Panel.ZIndex="8">
-                <StackPanel Margin="25">
-                    <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Zarezerwuj Lot" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
-                    <StackPanel Orientation="Horizontal">
-                        <ComboBox x:Name="LotStart" Height="45" Width="200" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Skąd Lecisz?">
-                            <ComboBoxItem TabIndex="0" Content="Rzeszów" HorizontalAlignment="Left" />
-                            <ComboBoxItem TabIndex="2" Content="Kraków" HorizontalAlignment="Left" />
-                            <ComboBoxItem TabIndex="1" Content="Warszawa" HorizontalAlignment="Left" />
-                        </ComboBox>
-                        <ComboBox x:Name="LotDoc" Height="45" Width="200" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Dokąd lecisz?">
-                            <ComboBoxItem TabIndex="0" Content="Berlin" HorizontalAlignment="Left" />
-                            <ComboBoxItem TabIndex="2" Content="Ateny" HorizontalAlignment="Left" />
-                            <ComboBoxItem TabIndex="1" Content="Londyn" HorizontalAlignment="Left" />
-                        </ComboBox>
-                        <DatePicker x:Name="Date" Height="45" Width="100" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintDatePicker}" materialDesign:HintAssist.Hint="Data Lotu:" >
-                           
-                        </DatePicker>
+                <Border Background="White" Margin="0 50 0 0" CornerRadius="5" Height="Auto" Panel.ZIndex="8">
+                    <StackPanel Margin="25">
+                        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="Rezerwuj Lot:" VerticalAlignment="Top" Width="350" FontSize="36" Foreground="Gray" TextAlignment="Center"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="Z" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Skąd lecisz?"/>
+                            <TextBox x:Name="DO" Height="45" Width="170" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Dokąd lecisz?"/>
+                            <Button x:Name="Find" Content="Szukaj Pasów" Padding="35 0 35 0" Click="Add_Click"  Margin="05" FontSize="16"/>
+                        </StackPanel>
+                        <DataGrid x:Name="Rezw" Margin="2" Height="190" IsReadOnly="True" GridLinesVisibility="Horizontal" >
+                            <!-- Nagłówki tekstowe kolumn-->
+                            <DataGrid.Columns>
+                                <materialDesign:MaterialDataGridTextColumn Width="150" Header="Wylot" Binding="{Binding Z}"/>
+                                <materialDesign:MaterialDataGridTextColumn Width="150" Header="Przylot" Binding="{Binding Do}"/>
+                                <materialDesign:MaterialDataGridTextColumn Width="150" Header="Data" Binding="{Binding Kiedy}"/>
+                                <materialDesign:MaterialDataGridTextColumn Width="150" Header="Numer lotu" Binding="{Binding Nrlot}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="Rez" Content="Pokaż szczegóły" Padding="35 0 35 0" Click="Kol_Click"  Margin=" 05" FontSize="16"/>
+                        </StackPanel>
                     </StackPanel>
-                    <ComboBox x:Name="Klasa" Height="45" Margin="15"  Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Wybierz klasę miejsca:">
-                        <ComboBoxItem TabIndex="0" Content="Klasa ekonomiczna" HorizontalAlignment="Left" />
-                        <ComboBoxItem TabIndex="1" Content="Klasa ekonomiczna premium" HorizontalAlignment="Left" />
-                        <ComboBoxItem TabIndex="2" Content="Klasa Biznesowa" HorizontalAlignment="Left" />
-                        <ComboBoxItem TabIndex="3" Content="Pierwsza klasa" HorizontalAlignment="Left" />
-                    </ComboBox>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-                        <Button x:Name="Rezerw" Content="Rezerwuję" Padding="35 0 35 0" Click="Rezerw_Click"  Margin="15 05" FontSize="16"/>
-                    </StackPanel>
-                </StackPanel>
-            </Border>
+                </Border>
             </StackPanel>
         </materialDesign:TransitioningContent>
     </Grid>

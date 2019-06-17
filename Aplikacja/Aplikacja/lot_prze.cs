@@ -12,11 +12,11 @@ namespace Aplikacja
     using System;
     using System.Collections.Generic;
     
-    public partial class LogReg
+    public partial class lot_prze
     {
         public long Id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
-        public long specification { get; set; }
+        public long id_us { get; set; }
+        public string Nazwa { get; set; }
+        public string opis { get; set; }
     }
 }

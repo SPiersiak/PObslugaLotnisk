@@ -6,10 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="a76582b0c4504e4896a1f4fb337cb91d" Name="Diagram1">
         <EntityTypeShape EntityType="LogRegModel.Ile_pas" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LogRegModel.LogReg" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LogRegModel.lotnisko" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LogRegModel.przewoznik" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogRegModel.lotnisko" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogRegModel.przewoznik" Width="1.5" PointX="2.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="LogRegModel.zar_uzyt" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LogRegModel.Log" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="LogRegModel.lot_prze" Width="1.5" PointX="4.75" PointY="4.125" />
+        <EntityTypeShape EntityType="LogRegModel.rezerwacje" Width="1.5" PointX="6.5" PointY="5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -7,15 +7,8 @@
     <Property Name="Id" Type="Int64" Nullable="false" />
     <Property Name="Id_lot" Type="Int64" Nullable="false" />
     <Property Name="Ile_pas1" Type="Int64" Nullable="false" />
-  </EntityType>
-  <EntityType Name="LogReg">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int64" Nullable="false" />
-    <Property Name="username" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="password" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="specification" Type="Int64" Nullable="false" />
+    <Property Name="typ" Type="Int64" />
+    <Property Name="pas_wol" Type="Int64" />
   </EntityType>
   <EntityType Name="lotnisko">
     <Key>
@@ -31,36 +24,69 @@
     <Property Name="Koszt" Type="Int64" Nullable="false" />
     <Property Name="Zarezerwowane" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Id_lot" Type="Int64" />
+    <Property Name="Id_prze" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="Nr_lot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="przewoznik">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int64" Nullable="false" />
-    <Property Name="AddLot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="K_kl_pierwszej" Type="Int64" Nullable="false" />
     <Property Name="K_kl_biznesowej" Type="Int64" Nullable="false" />
     <Property Name="K_kl_ekonomicznej" Type="Int64" Nullable="false" />
     <Property Name="K_bag_do25" Type="Int64" Nullable="false" />
-    <Property Name="K_bag_pow25" Type="Int64" Nullable="false" />
     <Property Name="I_miejsc" Type="Int64" Nullable="false" />
     <Property Name="Cz_trwania" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Przesiadki" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Id_prze" Type="Int64" />
+    <Property Name="Z" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="DO" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="K_bag_pow25" Type="Int64" Nullable="false" />
+    <Property Name="Nr_lot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="zar_uzyt">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int64" Nullable="false" />
-    <Property Name="Id_lot" Type="Int64" Nullable="false" />
     <Property Name="Id_user" Type="Int64" />
+    <Property Name="Name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="LogRegEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Ile_pas" EntityType="Self.Ile_pas" />
-    <EntitySet Name="LogRegs" EntityType="Self.LogReg" />
     <EntitySet Name="lotniskoes" EntityType="Self.lotnisko" />
     <EntitySet Name="przewozniks" EntityType="Self.przewoznik" />
     <EntitySet Name="zar_uzyt" EntityType="Self.zar_uzyt" />
+    <EntitySet Name="Logs" EntityType="LogRegModel.Log" />
+    <EntitySet Name="lot_prze" EntityType="LogRegModel.lot_prze" />
+    <EntitySet Name="rezerwacjes" EntityType="LogRegModel.rezerwacje" />
   </EntityContainer>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="specification" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lot_prze">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="id_us" Type="Int64" Nullable="false" />
+    <Property Name="Nazwa" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="opis" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rezerwacje">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" />
+    <Property Name="id_uzyt" Type="Int64" Nullable="false" />
+    <Property Name="nr_lotu" Type="String" Nullable="false" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

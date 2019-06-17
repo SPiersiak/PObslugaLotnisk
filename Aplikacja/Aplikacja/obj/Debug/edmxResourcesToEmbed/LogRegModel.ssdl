@@ -7,8 +7,10 @@
     <Property Name="Id" Type="integer" Nullable="false" />
     <Property Name="Id_lot" Type="integer" Nullable="false" />
     <Property Name="Ile_pas" Type="integer" Nullable="false" />
+    <Property Name="typ" Type="integer" />
+    <Property Name="pas_wol" Type="integer" />
   </EntityType>
-  <EntityType Name="LogReg">
+  <EntityType Name="Log">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -17,11 +19,20 @@
     <Property Name="password" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="specification" Type="integer" Nullable="false" />
   </EntityType>
-  <EntityType Name="lotnisko">
+  <EntityType Name="lot_prze">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="integer" Nullable="false" />
+    <Property Name="id_us" Type="integer" Nullable="false" />
+    <Property Name="Nazwa" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="opis" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lotnisko">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nazwa_Lot" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="Adres" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="Dzien" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
@@ -31,36 +42,51 @@
     <Property Name="Koszt" Type="integer" Nullable="false" />
     <Property Name="Zarezerwowane" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="Id_lot" Type="integer" />
+    <Property Name="Id_prze" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="Nr_lot" Type="nvarchar" MaxLength="2147483647" />
   </EntityType>
   <EntityType Name="przewoznik">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="integer" Nullable="false" />
-    <Property Name="AddLot" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
+    <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="K_kl_pierwszej" Type="integer" Nullable="false" />
     <Property Name="K_kl_biznesowej" Type="integer" Nullable="false" />
     <Property Name="K_kl_ekonomicznej" Type="integer" Nullable="false" />
     <Property Name="K_bag_do25" Type="integer" Nullable="false" />
-    <Property Name="K-bag_pow25" Type="integer" Nullable="false" />
+    <Property Name="K_bag_pow25" Type="integer" Nullable="false" />
     <Property Name="I_miejsc" Type="integer" Nullable="false" />
     <Property Name="Cz_trwania" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="Przesiadki" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
     <Property Name="Id_prze" Type="integer" />
+    <Property Name="Z" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="DO" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="Nr_lot" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <EntityType Name="rezerwacje">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="integer" Nullable="false" />
+    <Property Name="id_uzyt" Type="integer" Nullable="false" />
+    <Property Name="nr_lotu" Type="nvarchar" MaxLength="2147483647" Nullable="false" />
   </EntityType>
   <EntityType Name="zar_uzyt">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="integer" Nullable="false" />
-    <Property Name="Id_lot" Type="integer" Nullable="false" />
+    <Property Name="Id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Id_user" Type="integer" />
+    <Property Name="Name" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="2147483647" />
   </EntityType>
   <EntityContainer Name="LogRegModelStoreContainer">
     <EntitySet Name="Ile_pas" EntityType="Self.Ile_pas" store:Type="Tables" />
-    <EntitySet Name="LogReg" EntityType="Self.LogReg" store:Type="Tables" />
+    <EntitySet Name="Log" EntityType="Self.Log" store:Type="Tables" />
+    <EntitySet Name="lot_prze" EntityType="Self.lot_prze" store:Type="Tables" />
     <EntitySet Name="lotnisko" EntityType="Self.lotnisko" store:Type="Tables" />
     <EntitySet Name="przewoznik" EntityType="Self.przewoznik" store:Type="Tables" />
+    <EntitySet Name="rezerwacje" EntityType="Self.rezerwacje" store:Type="Tables" />
     <EntitySet Name="zar_uzyt" EntityType="Self.zar_uzyt" store:Type="Tables" />
   </EntityContainer>
 </Schema>

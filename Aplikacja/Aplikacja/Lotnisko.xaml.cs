@@ -50,19 +50,19 @@ namespace Aplikacja
             {
                 case 0:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MainMenu());
+                    GridPrincipal.Children.Add(new lotniskomenu(x,y));
                     break;
                 case 1:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MainMenu());
+                    GridPrincipal.Children.Add(new lotniskomenuadd(x,y));
                     break;
                 case 2:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new RezPasow_());
+                    GridPrincipal.Children.Add(new RezPasow_(x,y));
                     break;
                 case 3:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new DodPas_());
+                    GridPrincipal.Children.Add(new DodPas_(x));
                     break;
                 default:
                     break;
