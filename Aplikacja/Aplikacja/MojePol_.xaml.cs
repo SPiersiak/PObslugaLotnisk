@@ -20,6 +20,7 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy MojePol_.xaml
     /// </summary>
+    /// <remarks>Strona zawierająca tabelę z połączeniami danej lini lotniczej</remarks>
     public partial class MojePol_ : UserControl
     {
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
@@ -28,8 +29,14 @@ namespace Aplikacja
         public MojePol_()
         {
             InitializeComponent();
-            Linia.Text = "LOT";
+            
         }
+
+        /// <summary>
+        /// Konstruktor z argumentami ładujący dane do strony Moje połączenia
+        /// </summary>
+        /// <remarks> Po otwarciu automatycznie pobierane są dane z bazy,
+        /// następnie są wstawiane do tabeli</remarks>
         public MojePol_(string id, string typ):this()
         {
             x = id;
@@ -51,6 +58,10 @@ namespace Aplikacja
         }
     }
 
+    /// <summary>
+    /// Klasa Reprezentująca Wiersz w tabeli
+    /// </summary>
+    /// <remarks>Każda zmienna odpowiada danej kolumnie w tabeli</remarks>
     public class Lista
     {
         public string NrLot { get; set; }

@@ -35,13 +35,13 @@ namespace Aplikacja
             x = typ;
 
         }
+       
 
-        private void Szuk_Click(object sender, RoutedEventArgs e)
-        {
-            loty pas = new loty();
-            pas.ShowDialog();
-        }
 
+        /// <summary>
+        /// Wyszukiwanie Dostępnych lotów
+        /// </summary>
+        /// <remarks>Po wciśnięciu przycisku w tabeli wyświetlane są wszystkie dostępne Loty miedzy dwoma wpisanymi miejscami</remarks>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
@@ -60,6 +60,11 @@ namespace Aplikacja
             sqlcon.Close();
         }
 
+
+        /// <summary>
+        /// Pokaż szczegóły
+        /// </summary>
+        /// <remarks>Po wciśnięciu przycisku w tabeli w nowym oknie wyświetlane sa szczegółowe dane zaznaczonej w tabeli rezerwacji</remarks>
         private void Kol_Click(object sender, RoutedEventArgs e)
         {
             baza cos = (baza)Rezw.SelectedItem;
@@ -69,6 +74,11 @@ namespace Aplikacja
            
         }
     }
+
+    /// <summary>
+    /// Klasa Reprezentująca Wiersz w tabeli
+    /// </summary>
+    /// <remarks>Każda zmienna odpowiada danej kolumnie w tabeli</remarks>
     public class baza
     {
         public string Z { get; set; }

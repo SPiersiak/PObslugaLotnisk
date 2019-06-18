@@ -18,23 +18,35 @@ using System.Data.SQLite;
 namespace Aplikacja
 {
     /// <summary>
-    /// Logika interakcji dla klasy DodajLot.xaml
+    /// Logika interakcji dla Kontrolki DodajPol_.xaml
     /// </summary>
     public partial class DodajPol_ : UserControl
     {
+        /// <summary>
+        /// String połączenia z bazą oraz dane przechwytywane przez konstruktor
+        /// </summary>
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
         string x;
         string y;
+
         public DodajPol_()
         {
             InitializeComponent();
         }
+
         public DodajPol_(string id, string typ) : this()
         {
             x = id;
             y = typ;
         }
 
+        /// <summary>
+        /// Metoda Dodająca połączenia do bazy Danych
+        /// </summary>
+        /// <remarks>
+        /// Po kliknięciu przycisku nawiązywne jest połączenie z bazą, następnie są do niej przekazywane dane połączenia. 
+        /// W zależności od statusu działania wyświetli się dany MessageBox
+        /// </remarks>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);

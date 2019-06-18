@@ -22,13 +22,22 @@ namespace Aplikacja
     /// </summary>
     public partial class MainMenu : UserControl
     {
+        /// <summary>
+        /// String połączenia z bazą oraz dane przechwytywane przez konstruktor
+        /// </summary>
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
         string x;
         string y;
+
         public MainMenu()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor z argumentami ładujący dane do strony Menu głownego
+        /// </summary>
+        /// <remarks> Po wybraniu tej strony zostają do niej wczytane dane z bazy</remarks>
         public MainMenu(string id, string typ):this()
         {
             x = id;
@@ -61,6 +70,10 @@ namespace Aplikacja
             sqlcon.Close();
         }
 
+        /// <summary>
+        /// Aktualizacja danych Użytkownika
+        /// </summary>
+        /// <remarks>Po wpisaniu danych i kliknieciu przycisku Aktualizuj Nazwa i opis Użytkownika zostają zaktualizowane w bazie</remarks>
         private void Akt(object sender, RoutedEventArgs e)
         {
                 try

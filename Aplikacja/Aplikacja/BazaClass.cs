@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Aplikacja
 {
+    /// <summary>
+    /// Klasa za pomocą której przekazywane są dane do poszczególnych okien
+    /// </summary>
+    /// <param name="id">id użytkownika</param>
+    /// <param name="typ">Typ konta użytkownika</param>
     class BazaClass
     {
         private int id;

@@ -38,6 +38,10 @@ namespace Aplikacja
 
         }
 
+        /// <summary>
+        /// Wyszukiwanie pasów
+        /// </summary>
+        /// <remarks>Po wciśnięciu przycisku w tabeli wyświetlane są wszystkie dostępne terminy danego lotniska</remarks>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
@@ -56,10 +60,16 @@ namespace Aplikacja
             sqlcon.Close();
         }
 
+
+        /// <summary>
+        /// Rezerwacja pasa
+        /// </summary>
+        /// <remarks>Po zaznaczeniu w tabeli interesującego nas terminu wpisujemy nr lotu i klikamy rezerwuj.
+        /// Rezerwacja zostaje dodana do bazy</remarks>
         private void Rez_Click(object sender, RoutedEventArgs e)
         {
             Szukaj cos = (Szukaj)Rezw.SelectedItem;
-            string f = cos.nrpas;
+            string f = cos.Nrpas;
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
             sqlcon.Open();
             if (((Nr_lot.Text == "") && (f == "")) || (Nr_lot.Text == "") || (f == ""))
@@ -91,12 +101,16 @@ namespace Aplikacja
         }
     }
 
+    /// <summary>
+    /// Klasa Reprezentująca Wiersz w tabeli
+    /// </summary>
+    /// <remarks>Każda zmienna odpowiada danej kolumnie w tabeli</remarks>
     public class Szukaj
     {
         public string Lot { get; set; }
         public string Data { get; set; }
         public string Godz{ get; set; }
-        public string nrpas { get; set; }
+        public string Nrpas { get; set; }
         public string TypSam { get; set; }
         public string Koszt { get; set; }
     }

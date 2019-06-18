@@ -19,6 +19,8 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy przewoznikmenu.xaml
     /// </summary>
+    /// <remarks>Strona Głowna menu przewoźnika. Zostaje wyświetlona po zotwarciu okna Przewoznik
+    /// Zawiera Nazwę i opis przewoźnika</remarks>
     public partial class przewoznikmenu : UserControl
     {
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";

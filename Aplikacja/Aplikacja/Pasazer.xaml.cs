@@ -15,8 +15,11 @@ using System.Windows.Shapes;
 namespace Aplikacja
 {
     /// <summary>
-    /// Logika interakcji dla klasy Pasazer.xaml
+    /// Panel zarządzania kontem dla Użytkownika typu Pasazer
     /// </summary>
+    /// <remarks> Po zalogowaniu się Użytkownik typu Pasazer zostaje przekierowany do tego okna.
+    /// Może tu wybrać interesującą go zakładkę z menu i przejść do niej.
+    /// </remarks>
     public partial class Pasazer : Window
     {
         string x;
@@ -31,16 +34,29 @@ namespace Aplikacja
             y = typ;
         }
 
-    private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        ///  Metoda dla przycisku zamknięcia.
+        /// </summary>
+        /// <remarks>Po kliknięciu tego przycisku Aplikacja zostaje zamknięta</remarks>
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        /// <summary>
+        /// Metoda Przesuwania okna
+        /// </summary>
+        /// <remarks>Po nacisnięciu na okno można je przesuwać po pulpicie</remarks>
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
 
+
+        /// <summary>
+        /// Menu Panelu Pasazer
+        /// </summary>
+        ///<remarks>Po kliknięciu na dany przycisk w menu otwiera się odpowiednia zakładka</remarks>
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index = ListViewMenu.SelectedIndex;
@@ -69,6 +85,11 @@ namespace Aplikacja
             }
         }
 
+
+        /// <summary>
+        /// Przestawienie oznaczenia na wybrany przycisk
+        /// </summary>
+        /// <remarks>Po kliknięci przycisku graficzny znacznik zostaje na niego przestawiony</remarks>
         private void MoveCursorMenu(int index)
         {
             TrainsitionigContentSlide.OnApplyTemplate();

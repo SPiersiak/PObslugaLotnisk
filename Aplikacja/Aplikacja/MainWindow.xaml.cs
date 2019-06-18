@@ -21,6 +21,7 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy MainWindow.xaml
     /// </summary>
+    /// <remarks>Okno logowania Użytkownika</remarks>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -29,9 +30,19 @@ namespace Aplikacja
 
         }
 
-
+        /// <summary>
+        /// String połączenia z bazą 
+        /// </summary>
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
 
+
+
+        /// <summary>
+        /// Logowanie do Aplikacji
+        /// </summary>
+        /// <remarks>Po wpisaniu Loginu i hasła oraz Kliknięciu Login
+        /// wpisane do pól dane porównywane są z bazą danych, jeśli są zgodne Logowanie przebiega pomyślnie
+        /// i jesteśmy przenoszeni do okna głównego aplikacji</remarks>
         public void Login_Click1(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
@@ -100,44 +111,12 @@ namespace Aplikacja
                 
             }
 
-            
-            /*List<string> loginList = new List<string>();
-            using (var db = new LogRegEntities())
-            {
-                var query = @"SELECT Id from LogReg WHERE username='" + this.Login1.Text + "' and password='" + this.Password.Password + "' ";
-                int[] result = db.Database.ExecuteSqlCommand(query);
-                //loginList = (from g in db.LogRegs select g.Id + g.username + g.password + g.specification).ToList();
-                db.Dispose();
-                
-            }
-            using (var db1 = new DateContext())
-            {
-                using (var command = db1.Database.GetDbConnection().CreateCommand())
-                {
-
-                }
-            }
-            
-
-           /* if (Equals(log, Login1.Text) && Equals(pas, Password.Password))
-            {
-                MessageBox.Show(log);
-            }
-            else MessageBox.Show(log+pas);*/
-
-
-            //    this.Hide();
-            //MessageBox.Show("Zalogowano");
-            //second sec = new second();
-            //sec.ShowDialog();*/
-
-            /*this.Hide();
-            
-            Lotnisko sec = new Lotnisko();
-            sec.ShowDialog();*/
         }
 
-
+        /// <summary>
+        /// Przycisk Rejestracji
+        /// </summary>
+        /// <remarks>Po kliknięciu tego przycisku zostajemy przeniesieni do okna rejestracji</remarks>
         private void Register_Click(object sender, RoutedEventArgs e)
         {
 
@@ -153,11 +132,20 @@ namespace Aplikacja
 
         }
 
+        /// <summary>
+        ///  Metoda dla przycisku zamknięcia.
+        /// </summary>
+        /// <Remarks>Po kliknięciu tego przycisku Aplikacja zostaje zamknięta</Remarks>
         private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+
+        /// <summary>
+        /// Metoda Przesuwania okna
+        /// </summary>
+        /// <remarks>Po nacisnięciu na okno można je przesuwać po pulpicie</remarks>
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();

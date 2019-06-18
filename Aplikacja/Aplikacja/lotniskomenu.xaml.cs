@@ -21,14 +21,23 @@ namespace Aplikacja
     /// </summary>
     public partial class lotniskomenu : UserControl
     {
+        /// <summary>
+        /// String połączenia z bazą oraz dane przechwytywane przez konstruktor
+        /// </summary>
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
         string x;
         string y;
+
         public lotniskomenu()
         {
             InitializeComponent();
 
         }
+
+        /// <summary>
+        /// Konstruktor z argumentami ładujący dane do strony Menu głownego
+        /// </summary>
+        /// <remarks> Po wybraniu tej strony zostają do niej wczytane dane z bazy</remarks>
         public lotniskomenu (string id, string typ) : this()
         {
             x = id;

@@ -19,6 +19,7 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy loty.xaml
     /// </summary>
+    /// <remarks>Okno z wynikami wyszukiwania lotów</remarks>
     public partial class loty : Window
     {
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";

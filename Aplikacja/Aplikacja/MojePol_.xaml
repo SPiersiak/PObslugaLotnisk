@@ -11,9 +11,9 @@
         <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect SlideInFromLeft, Duration=0:0:0.8}">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Height="450" Width="650">
                 <StackPanel HorizontalAlignment="Center" Width="650">
-                    <TextBlock Text="Połączenia" Foreground="Gray" FontSize="25" Margin="10 0 0 0 "/>
+                    
                     <StackPanel Margin="10">
-                        <TextBlock Name="Linia" Text="Nazwa Linii" Foreground="Gray" FontSize="35" Margin="0 2 0 7"/>
+                        <TextBlock Name="Linia" Text="Moje Połączenia" Foreground="Gray" FontSize="35" Margin="0 15 0 7"/>
                         <Border Background="White" CornerRadius="5" Panel.ZIndex="8" Width="Auto">
                             <DataGrid x:Name="Pol" Margin="2" Height="330" IsReadOnly="True" GridLinesVisibility="Horizontal">
                                 <DataGrid.Columns>

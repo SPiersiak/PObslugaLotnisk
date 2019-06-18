@@ -23,6 +23,7 @@ namespace Aplikacja
     /// </summary>
     public partial class DodPas_ : UserControl
     {
+        ///zmienna przechowująca Id uzytkownika
         string x;
         
         public DodPas_()
@@ -34,10 +35,15 @@ namespace Aplikacja
             x = id;
         }
 
+        /// <summary>
+        /// Metoda dodająca pas startowy
+        /// </summary>
+        /// <remarks> Po kliknieciu przycisku "Dodaj pas Startowy" dane są przekazywane do bazy</remarks>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             int i = Convert.ToInt32(x);
             string j = ile.Text;
+            //Połączenie z bazą
             using (var db = new LogRegEntities())
             {
                 int g = rodzaj.SelectedIndex;

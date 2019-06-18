@@ -20,15 +20,25 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy lotniskomenuadd.xaml
     /// </summary>
+    /// <remarks>Po otworzeniu tej strony możemy zaktualizować dane uzytkowika</remarks>
     public partial class lotniskomenuadd : UserControl
     {
+        /// <summary>
+        /// String połączenia z bazą oraz dane przechwytywane przez konstruktor
+        /// </summary>
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
         string x;
         string y;
+
         public lotniskomenuadd()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor z parametrami
+        /// </summary>
+        /// <remarks>Po wybraniu tej strony zostają wczytane dane użytkownika z bazy danych</remarks>
         public lotniskomenuadd(string id, string typ):this()
         {
             x = id;
@@ -63,6 +73,10 @@ namespace Aplikacja
             sqlcon.Close();
         }
 
+        /// <summary>
+        /// Aktualizacja danych Lotniska
+        /// </summary>
+        /// <remarks>Po wpisaniu danych i przycisku Aktualizuj Nazwa i opis lotniska zostają zaktualizowane w bazie</remarks>
         private void Akt(object sender, RoutedEventArgs e)
         {
             try

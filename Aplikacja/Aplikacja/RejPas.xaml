@@ -23,15 +23,14 @@
                                 <materialDesign:MaterialDataGridTextColumn Header="Lotnisko" Binding="{Binding Lot}"/>
                                     <materialDesign:MaterialDataGridTextColumn Header="Data" Binding="{Binding Data}"/>
                                     <materialDesign:MaterialDataGridTextColumn Header="Godzina" Binding="{Binding Godz}"/>
-                                    <materialDesign:MaterialDataGridTextColumn Header="Nr Pasa" Binding="{Binding nrpas}"/>
+                                    <materialDesign:MaterialDataGridTextColumn Header="Nr Pasa" Binding="{Binding Nrpas}"/>
                                     <materialDesign:MaterialDataGridTextColumn Header="Typ Samolotu" Binding="{Binding TypSam}"/>
                                     <materialDesign:MaterialDataGridTextColumn Header="Koszt Rezerwacji" Binding="{Binding Koszt}"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                        
                         <StackPanel Orientation="Horizontal">
-                            <TextBox x:Name="Nr_lot" Height="45" Width="160" Margin="15 0 20 20"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Nr lotu"/>
-                            <TextBox x:Name="Id" Height="45" Width="160" Margin="15 0 20 20"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Id"/>
+                            <TextBox x:Name="Nr_lot" Height="45" Width="160" Margin="15 0 220 20"  Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Nr lotu"/>
                             <Button x:Name="Rez" Content="Rezerwuj" Padding="35 0 35 0" Click="Rez_Click"  Margin=" 05" FontSize="16"/>
                         </StackPanel>
                     </StackPanel>

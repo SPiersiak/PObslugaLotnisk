@@ -19,15 +19,26 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy przewoznikmenuadd.xaml
     /// </summary>
+    /// <remarks>Po otworzeniu tej strony możemy zaktualizować dane uzytkowika</remarks>
     public partial class przewoznikmenuadd : UserControl
     {
+
+        /// <summary>
+        /// String połączenia z bazą oraz dane przechwytywane przez konstruktor
+        /// </summary>
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
         string x;
         string y;
+
         public przewoznikmenuadd()
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor z parametrami
+        /// </summary>
+        /// <remarks>Po wybraniu tej strony zostają wczytane dane użytkownika z bazy danych</remarks>
         public przewoznikmenuadd(string id, string typ) : this()
         {
             x = id;
@@ -60,6 +71,11 @@ namespace Aplikacja
             sqlcon.Close();
         }
 
+
+        /// <summary>
+        /// Aktualizacja danych Przewoźnika
+        /// </summary>
+        /// <remarks>Po wpisaniu danych i przycisku Aktualizuj Nazwa i opis Przewoźnika zostają zaktualizowane w bazie</remarks>
         private void Akt(object sender, RoutedEventArgs e)
         {
             try

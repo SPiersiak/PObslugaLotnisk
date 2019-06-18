@@ -22,10 +22,10 @@
                 <StackPanel Margin="25">
                     
                     <TextBox x:Name="Login1" Text="{Binding Login}" Margin="15" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="Login"/>
-                    <PasswordBox x:Name="Password" Margin="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"  materialDesign:HintAssist.Hint="Password" />
+                    <PasswordBox x:Name="Password" Margin="15" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"  materialDesign:HintAssist.Hint="Hasło" />
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
-                        <Button x:Name="Login" Content="  Login  " Click="Login_Click1" Margin="15 05"/>
-                        <Button x:Name="Register" Content="Register" Click="Register_Click"  Margin="15 05"/>
+                        <Button x:Name="Login" Content="  Zaloguj  " Click="Login_Click1" Margin="15 05"/>
+                        <Button x:Name="Register" Content="Zarejestruj" Click="Register_Click"  Margin="15 05"/>
                     </StackPanel>
                 </StackPanel>
             </Border>

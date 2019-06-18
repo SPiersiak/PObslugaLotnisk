@@ -15,27 +15,9 @@
                     <StackPanel Margin="10">
                         <TextBlock Name="nazwa"  Foreground="Gray" FontSize="35" Margin="0,5,0,-1"/>
                         <TextBlock Name="opis"  Foreground="Gray" FontSize="35" TextWrapping="Wrap"/>
-                        <TextBlock Text="Następna podróż:" FontSize="25" Foreground="Gray" FontFamily="Champagne &amp; Limousines" Margin="5,15,5,5"/>
-                        <Border Background="#2196F3" CornerRadius="5" Panel.ZIndex="8" Width="367">
-                            <StackPanel Orientation="Horizontal">
-                                <StackPanel Orientation="Vertical">
-                                    <Label Content="Wylot z:" FontSize="20" Margin="0,5,0,0"/>
-                                    <Label Content="Lot do:" FontSize="20"/>
-                                    <Label Content="Data Wylotu:" FontSize="20"/>
-                                    <Label Content="Czas Trwania:" FontSize="20"/>
-                                    <Label Content="Samolot:" FontSize="20"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Vertical" HorizontalAlignment="Right" >
-                                    <Label x:Name="wyl" Content="Dane" FontSize="20" Margin="0,5,0,0"/>
-                                    <Label x:Name="cel" Content="Dane" FontSize="20"/>
-                                    <Label x:Name="date" Content="Dane" FontSize="20"/>
-                                    <Label x:Name="lin" Content="Dane" FontSize="20"/>
-                                    <Label x:Name="seat" Content="Dane" FontSize="20"/>
-                                </StackPanel>
-                            </StackPanel>
-                        </Border>
+                       
                     </StackPanel>
-                    <Label FontFamily="Champagne &amp; Limousines" Content="Życzymy udanej podróży" Foreground="Gray" FontSize="18" Margin="25"/>
+                    <Label FontFamily="Champagne &amp; Limousines" Content="Życzymy udanej podróży" Foreground="Gray" FontSize="18" Margin="25 250 25 0"/>
                 </StackPanel>
             </StackPanel>
         </materialDesign:TransitioningContent>

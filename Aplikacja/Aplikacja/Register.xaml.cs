@@ -17,6 +17,7 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy Register.xaml
     /// </summary>
+    /// <remarks>Okno rejestracji użytkownika</remarks>
     public partial class Register : Window
     {
         string x;
@@ -33,7 +34,12 @@ namespace Aplikacja
 
 
 
-
+        /// <summary>
+        /// Rejestracja do Aplikacji
+        /// </summary>
+        /// <remarks>Po wybraniu typu konta oraz wpisaniu Loginu i hasła oraz Kliknięciu Login
+        /// wpisane do pól dane dodawane są do bazy danych
+        /// i jesteśmy przenoszeni do okna Logowania aplikacji</remarks>
         private void Register_Click(object sender, RoutedEventArgs e)
         {   
            using (var db = new LogRegEntities())
@@ -52,21 +58,28 @@ namespace Aplikacja
                 
             }
             this.Hide();
-            Lotnisko lot = new Lotnisko();
-            lot.ShowDialog();
+            MainWindow log = new MainWindow();
+            log.ShowDialog();
             
 
 
 
         }
 
-        
 
+        /// <summary>
+        ///  Metoda dla przycisku zamknięcia.
+        /// </summary>
+        /// <Remarks>Po kliknięciu tego przycisku Aplikacja zostaje zamknięta</Remarks>
         private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
 
+        /// <summary>
+        /// Metoda Przesuwania okna
+        /// </summary>
+        /// <remarks>Po nacisnięciu na okno można je przesuwać po pulpicie</remarks>
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();

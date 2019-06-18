@@ -45,6 +45,8 @@ namespace Aplikacja
                 Rezw.Items.Add(data[i]);
             }
         }
+
+
         public Rezerwacje_(string id) : this()
         {
             x = id;
@@ -76,8 +78,11 @@ namespace Aplikacja
             sqlcon.Close();
         }
     }
-    
 
+    /// <summary>
+    /// Klasa Reprezentująca Wiersz w tabeli
+    /// </summary>
+    /// <remarks>Każda zmienna odpowiada danej kolumnie w tabeli</remarks>
     public class Row
     {
         public string LotStart { get; set; }

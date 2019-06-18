@@ -20,6 +20,7 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy MainMenu1.xaml
     /// </summary>
+    /// <remarks>Strona menu automatycznie otwierana wraz z otwarciem okna</remarks>
     public partial class MainMenu1 : UserControl
     {
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
@@ -29,6 +30,11 @@ namespace Aplikacja
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor z argumentami ładujący dane do strony Menu głownego
+        /// </summary>
+        /// <remarks> Po otwarciu automatycznie pobierane są dane z bazy</remarks>
         public MainMenu1(string id, string typ) : this()
         {
             x = id;

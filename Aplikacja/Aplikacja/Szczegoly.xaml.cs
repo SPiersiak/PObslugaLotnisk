@@ -19,6 +19,7 @@ namespace Aplikacja
     /// <summary>
     /// Logika interakcji dla klasy Szczegoly.xaml
     /// </summary>
+    /// <remarks>Okno ze szczegółowymi danymi rezerwacji</remarks>
     public partial class Szczegoly : Window
     {
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
@@ -84,6 +85,11 @@ namespace Aplikacja
             prze.Content = prz;
         }
 
+
+        /// <summary>
+        /// Rezrwacja terminu
+        /// </summary>
+        /// <remarks>Po kliknięciu wyświetlony w oknie termin zostaje zarezerwowany</remarks>
         private void Rezerwacja_Click(object sender, RoutedEventArgs e)
         {
 
