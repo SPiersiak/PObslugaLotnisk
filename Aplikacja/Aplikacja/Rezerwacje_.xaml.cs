@@ -28,24 +28,21 @@ namespace Aplikacja
         {
             InitializeComponent();
 
-
-            List<Row> data = new List<Row>
+            SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
+            sqlcon.Open();
+            string query = "SELECT nr_lotu FROM rezerwacje WHERE id_uzyt ='" + x + "' ";
+            SQLiteCommand com = new SQLiteCommand(query, sqlcon);
+            com.ExecuteNonQuery();
+            SQLiteDataReader dr = com.ExecuteReader();
+            int count = 0;
+            while (dr.Read())
             {
-            new Row { LotStart = "Rzeszów", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
-            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
-            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
-            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
-            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
-            new Row { LotStart = "Krakow", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" },
-            new Row { LotStart = "Świebodzin", LotDoc = "Warszawa", DataLot = "22-06-2019", LinLot = "LOT", NumMiej = "15" }
-            };
-            int x = data.Count;
-            for (int i = 0; i < x; i++)
-            {
-                Rezw.Items.Add(data[i]);
+                count++;
+                Wie nazwa = new Wie { Nrlot = dr["nr_lotu"].ToString() };
+                Rezwac.Items.Add(nazwa);
             }
+            sqlcon.Close();
         }
-
 
         public Rezerwacje_(string id) : this()
         {
@@ -77,18 +74,19 @@ namespace Aplikacja
             }
             sqlcon.Close();
         }
+
+        private void Rezw_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 
     /// <summary>
     /// Klasa Reprezentująca Wiersz w tabeli
     /// </summary>
     /// <remarks>Każda zmienna odpowiada danej kolumnie w tabeli</remarks>
-    public class Row
+    public class Wie
     {
-        public string LotStart { get; set; }
-        public string LotDoc { get; set; }
-        public string DataLot { get; set; }
-        public string LinLot { get; set; }
-        public string NumMiej { get; set; }
+        public string Nrlot { get; set; }
     }
 }

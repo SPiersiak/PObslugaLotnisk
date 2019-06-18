@@ -47,7 +47,7 @@ namespace Aplikacja
                 int g = usrtype.SelectedIndex;
                 Log newItem = new Log
                 {
-                    Id = db.Logs.Count() + 1,
+                    //Id = db.Logs.Count() + 1,
                     username = LoginBox.Text,
                     password = Password.Password,
                     specification = g,

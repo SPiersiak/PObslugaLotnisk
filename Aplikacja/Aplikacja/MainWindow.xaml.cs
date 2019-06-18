@@ -76,7 +76,6 @@ namespace Aplikacja
                         {
                             case 0:
                                 this.Hide();
-                                MessageBox.Show("Zalogowano");
                                 Pasazer pas = new Pasazer(id,typ);
                                 pas.ShowDialog();
                                 break;

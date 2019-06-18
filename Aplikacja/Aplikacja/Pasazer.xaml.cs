@@ -24,14 +24,16 @@ namespace Aplikacja
     {
         string x;
         string y;
+
         public Pasazer()
         {
             InitializeComponent();
         }
-        public Pasazer(string id, string typ) : this()
+        public Pasazer(string id, string typ):this()
         {
             x = id;
             y = typ;
+
         }
 
         /// <summary>
@@ -73,10 +75,6 @@ namespace Aplikacja
                     GridPrincipal.Children.Add(new MainMenu(x,y));
                     break;
                 case 2:
-                    GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new Rezerwacje_(x));
-                    break;
-                case 3:
                     GridPrincipal.Children.Clear();
                     GridPrincipal.Children.Add(new Zarezerwuj_(x));
                     break;

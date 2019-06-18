@@ -48,12 +48,7 @@
                             <TextBlock Text="Moje Dane" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="AeroplaneTakeoff" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
-                            <TextBlock Text="Rezerwacje" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
-                        </StackPanel>
-                    </ListViewItem>
+
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Add" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>

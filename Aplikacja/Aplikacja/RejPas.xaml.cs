@@ -46,7 +46,7 @@ namespace Aplikacja
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
             sqlcon.Open();
-            string query = "SELECT Nazwa_Lot, Dzien, Godzina, Nr_pas, Typ_sam, Koszt FROM lotnisko WHERE  Nazwa_Lot ='" + Z.Text + "'";
+            string query = "SELECT Nazwa_Lot, Dzien, Godzina, Nr_pas, Typ_sam, Koszt FROM lotnisko WHERE  Nazwa_Lot ='" + Z.Text + "' AND Zarezerwowane = 'Nie'";
             SQLiteCommand com = new SQLiteCommand(query, sqlcon);
             com.ExecuteNonQuery();
             SQLiteDataReader dr = com.ExecuteReader();
@@ -54,7 +54,7 @@ namespace Aplikacja
             while (dr.Read())
             {
                 count++;
-                Szukaj nazwa = new Szukaj { Lot = dr["Nazwa_Lot"].ToString(), Data=dr["Dzien"].ToString(), Godz=dr["Godzina"].ToString(), nrpas=dr["Nr_pas"].ToString(), TypSam=dr["Typ_sam"].ToString(), Koszt=dr["Koszt"].ToString() };
+                Szukaj nazwa = new Szukaj { Lot = dr["Nazwa_Lot"].ToString(), Data=dr["Dzien"].ToString(), Godz=dr["Godzina"].ToString(), Nrpas=dr["Nr_pas"].ToString(), TypSam=dr["Typ_sam"].ToString(), Koszt=dr["Koszt"].ToString() };
                 Rezw.Items.Add(nazwa);
             }
             sqlcon.Close();

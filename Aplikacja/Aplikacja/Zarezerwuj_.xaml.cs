@@ -23,6 +23,7 @@ namespace Aplikacja
     /// </summary>
     public partial class Zarezerwuj_ : UserControl
     {
+
         string dbcon = @"Data Source = C:\Users\piers\Documents\GitHub\Aplikacja\LogReg.db;Version=3";
         string x;
         public Zarezerwuj_()
@@ -30,9 +31,9 @@ namespace Aplikacja
             InitializeComponent();
 
         }
-        public Zarezerwuj_(string typ):this()
+        public Zarezerwuj_(string id):this()
         {
-            x = typ;
+            x = id;
 
         }
        
@@ -69,9 +70,26 @@ namespace Aplikacja
         {
             baza cos = (baza)Rezw.SelectedItem;
             string f = cos.Nrlot;
-            Szczegoly abc = new Szczegoly(f);
-            abc.Show();
-           
+            SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
+            sqlcon.Open();
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd.CommandText = @"INSERT INTO rezerwacje(id_uzyt, nr_lotu) VALUES (@id, @nr)";
+            cmd.Connection = sqlcon;
+            cmd.Parameters.Add(new SQLiteParameter("@id", Convert.ToInt32(x)));
+            cmd.Parameters.Add(new SQLiteParameter("@nr", f));
+
+            int u = cmd.ExecuteNonQuery();
+            if (u == 1)
+            {
+                MessageBox.Show("dodano dane");
+            }
+            else
+            {
+                MessageBox.Show("error2");
+            }
+
+            sqlcon.Close();
+
         }
     }
 

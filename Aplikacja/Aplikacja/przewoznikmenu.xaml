@@ -17,7 +17,7 @@
                         <TextBlock Name="opis"  Foreground="Gray" FontSize="35" TextWrapping="Wrap"/>
                        
                     </StackPanel>
-                    <Label FontFamily="Champagne &amp; Limousines" Content="Życzymy udanej podróży" Foreground="Gray" FontSize="18" Margin="25 250 25 0"/>
+                    
                 </StackPanel>
             </StackPanel>
         </materialDesign:TransitioningContent>
