@@ -31,18 +31,25 @@ namespace Aplikacja
             InitializeComponent();
 
         }
+
+        /// <summary>
+        /// Konstruktor z parametrem
+        /// </summary>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
         public Zarezerwuj_(string id):this()
         {
             x = id;
 
         }
-       
+
 
 
         /// <summary>
         /// Wyszukiwanie Dostępnych lotów
         /// </summary>
         /// <remarks>Po wciśnięciu przycisku w tabeli wyświetlane są wszystkie dostępne Loty miedzy dwoma wpisanymi miejscami</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
@@ -66,6 +73,8 @@ namespace Aplikacja
         /// Pokaż szczegóły
         /// </summary>
         /// <remarks>Po wciśnięciu przycisku w tabeli w nowym oknie wyświetlane sa szczegółowe dane zaznaczonej w tabeli rezerwacji</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Kol_Click(object sender, RoutedEventArgs e)
         {
             baza cos = (baza)Rezw.SelectedItem;

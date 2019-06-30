@@ -28,6 +28,12 @@ namespace Aplikacja
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor z parametrem
+        /// </summary>
+        /// <remarks>Po stworzeniu obiektu z parametrami wczytuje dane z bazy</remarks>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
         public Szczegoly(string nr):this()
         {
             x = nr;
@@ -90,6 +96,8 @@ namespace Aplikacja
         /// Rezrwacja terminu
         /// </summary>
         /// <remarks>Po kliknięciu wyświetlony w oknie termin zostaje zarezerwowany</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Rezerwacja_Click(object sender, RoutedEventArgs e)
         {
 

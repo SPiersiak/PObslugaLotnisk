@@ -38,7 +38,9 @@ namespace Aplikacja
         /// <summary>
         /// Konstruktor z parametrami
         /// </summary>
-        /// <remarks>Po wybraniu tej strony zostają wczytane dane użytkownika z bazy danych</remarks>
+        /// <remarks>Po wywołaniu tego konstruktora zostają wczytane dane użytkownika z bazy danych</remarks>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
+        /// <param name="typ">Typ zalogowanego uzytkownika</param>
         public przewoznikmenuadd(string id, string typ) : this()
         {
             x = id;

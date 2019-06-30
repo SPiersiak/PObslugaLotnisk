@@ -28,6 +28,12 @@ namespace Aplikacja
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor przekazujący parametry
+        /// </summary>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
+        /// <param name="typ">Typ zalogowanego uzytkownika</param>
         public Lotnisko(string id, string typ) : this()
         {
             x = id;
@@ -38,6 +44,8 @@ namespace Aplikacja
         ///  Metoda dla przycisku zamknięcia.
         /// </summary>
         /// <remarks>Po kliknięciu tego przycisku Aplikacja zostaje zamknięta</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -47,6 +55,8 @@ namespace Aplikacja
         /// Metoda Przesuwania okna
         /// </summary>
         /// <remarks>Po nacisnięciu na okno można je przesuwać po pulpicie</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -56,6 +66,8 @@ namespace Aplikacja
         /// Menu Panelu Lotnisko
         /// </summary>
         ///<remarks>Po kliknięciu na dany przycisk w menu otwiera się odpowiednia zakładka</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //index wybranego przycisku
@@ -90,6 +102,7 @@ namespace Aplikacja
         /// Przestawienie oznaczenia na wybrany przycisk
         /// </summary>
         /// <remarks>Po kliknięci przycisku graficzny znacznik zostaje na niego przestawiony</remarks>
+        /// <param name="index">index wybranego przycisku menu</param>
         private void MoveCursorMenu(int index)
         {
             TrainsitionigContentSlide.OnApplyTemplate();

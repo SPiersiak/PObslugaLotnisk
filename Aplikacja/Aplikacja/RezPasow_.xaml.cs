@@ -41,6 +41,8 @@ namespace Aplikacja
         /// Dodanie Dostępności pasa so bazy
         /// </summary>
         /// <remarks>Po wpisaniu danych i kliknieciu przycisku dany termin zostaje wpisany do bazy danych</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);

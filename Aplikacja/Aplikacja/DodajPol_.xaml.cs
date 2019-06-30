@@ -34,6 +34,12 @@ namespace Aplikacja
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// Konstruktor przekazujący parametry
+        /// </summary>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
+        /// <param name="typ">Typ zalogowanego uzytkownika</param>
         public DodajPol_(string id, string typ) : this()
         {
             x = id;
@@ -47,6 +53,8 @@ namespace Aplikacja
         /// Po kliknięciu przycisku nawiązywne jest połączenie z bazą, następnie są do niej przekazywane dane połączenia. 
         /// W zależności od statusu działania wyświetli się dany MessageBox
         /// </remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);

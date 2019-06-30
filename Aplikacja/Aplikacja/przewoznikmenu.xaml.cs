@@ -30,6 +30,12 @@ namespace Aplikacja
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor który pobiera z bazy dane uzytkownika i je wyswietla
+        /// </summary>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
+        /// <param name="typ">Typ zalogowanego uzytkownika</param>
         public przewoznikmenu(string id, string typ) : this()
         {
             x = id;

@@ -30,6 +30,11 @@ namespace Aplikacja
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Konstruktor pz parametrami
+        /// </summary>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
         public DodPas_(string id) : this()
         {
             x = id;
@@ -39,6 +44,8 @@ namespace Aplikacja
         /// Metoda dodająca pas startowy
         /// </summary>
         /// <remarks> Po kliknieciu przycisku "Dodaj pas Startowy" dane są przekazywane do bazy</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             int i = Convert.ToInt32(x);

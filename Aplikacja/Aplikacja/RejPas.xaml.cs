@@ -31,6 +31,12 @@ namespace Aplikacja
             
         }
 
+
+        /// <summary>
+        /// Konstruktor z parametrami
+        /// </summary>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
+        /// <param name="typ">Typ zalogowanego uzytkownika</param>
         public RejPas(string id, string typ) : this()
         {
             x = id;
@@ -42,6 +48,8 @@ namespace Aplikacja
         /// Wyszukiwanie pasów
         /// </summary>
         /// <remarks>Po wciśnięciu przycisku w tabeli wyświetlane są wszystkie dostępne terminy danego lotniska</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             SQLiteConnection sqlcon = new SQLiteConnection(dbcon);
@@ -66,6 +74,8 @@ namespace Aplikacja
         /// </summary>
         /// <remarks>Po zaznaczeniu w tabeli interesującego nas terminu wpisujemy nr lotu i klikamy rezerwuj.
         /// Rezerwacja zostaje dodana do bazy</remarks>
+        /// <param name="sender">Obiekt wywołujący zdarzenie</param>
+        /// <param name="e">Zdarzenie które wywołało funkcję</param>
         private void Rez_Click(object sender, RoutedEventArgs e)
         {
             Szukaj cos = (Szukaj)Rezw.SelectedItem;

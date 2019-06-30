@@ -44,6 +44,10 @@ namespace Aplikacja
             sqlcon.Close();
         }
 
+        /// <summary>
+        /// Konstruktor z parametrem
+        /// </summary>
+        /// <param name="id">Id zalogowanego uzytkownika</param>
         public Rezerwacje_(string id) : this()
         {
             x = id;
@@ -75,10 +79,7 @@ namespace Aplikacja
             sqlcon.Close();
         }
 
-        private void Rezw_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+     
     }
 
     /// <summary>
